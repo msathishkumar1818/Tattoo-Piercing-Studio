@@ -1,0 +1,800 @@
+/* ==========================================================================
+   TATTOO & PIERCING STUDIO - RESPONSIVE & ADAPTIVE STYLES
+   Ensures unified compact container alignment and pristine responsive behavior
+   Breakpoints: 320, 360, 375, 393, 412, 427, 440, 768, 820, 960, 1024, 1032, 1280, 1440+
+   ========================================================================== */
+
+/* ---------------- Unified Compact Container Lock ---------------- */
+.container-custom {
+  width: 100%;
+  max-width: 1120px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: clamp(0.85rem, 3.5vw, 1.5rem) !important;
+  padding-right: clamp(0.85rem, 3.5vw, 1.5rem) !important;
+  box-sizing: border-box !important;
+}
+
+/* ---------------- Universal Mobile Handhelds (max-width: 640px) ----------------
+   Covers: 320, 360, 375, 393, 412, 427, 440 up to 640px */
+@media (max-width: 640px) {
+  /* CTA Action Buttons - Clean stacked full width with matching pill shape & alignment */
+  .cta-actions-group,
+  .section-services-cta .flex.flex-wrap.items-center.justify-center.gap-4,
+  .section-aftercare-cta .flex.flex-wrap.items-center.justify-center.gap-4,
+  .hero-home2 .flex.flex-wrap.items-center.justify-center.gap-4 {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    max-width: 380px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    gap: 0.85rem !important;
+  }
+
+  .cta-actions-group .btn-primary,
+  .cta-actions-group .btn-secondary,
+  .section-services-cta .btn-primary,
+  .section-services-cta .btn-secondary,
+  .section-aftercare-cta .btn-primary,
+  .section-aftercare-cta .btn-secondary,
+  .hero-home2 .btn-primary,
+  .hero-home2 .btn-secondary {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 48px !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 0.75rem 1.25rem !important;
+    font-size: 0.82rem !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Hero micro-stats: 3 equal, perfectly balanced columns with zero collision */
+  .hero-stats-row {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 0.65rem !important;
+    padding-top: 1.25rem !important;
+    margin-top: 1.5rem !important;
+    width: 100% !important;
+  }
+
+  .hero-stats-row .stat-item {
+    min-width: 0 !important;
+    text-align: left !important;
+  }
+
+  html[dir="rtl"] .hero-stats-row .stat-item {
+    text-align: right !important;
+  }
+
+  .hero-stats-row .stat-number {
+    font-size: clamp(1.2rem, 4.8vw, 1.55rem) !important;
+    line-height: 1 !important;
+  }
+
+  .hero-stats-row .stat-label {
+    font-size: clamp(0.52rem, 2vw, 0.64rem) !important;
+    letter-spacing: 0.03em !important;
+    line-height: 1.25 !important;
+    margin-top: 0.25rem !important;
+  }
+
+  /* Home 2 Centered Micro Stats */
+  .hero-home2-stats {
+    gap: 0.75rem !important;
+    padding-top: 1rem !important;
+    margin-top: 2rem !important;
+  }
+
+  .hero-home2-stats .font-heading {
+    font-size: 1.35rem !important;
+  }
+
+  .hero-home2-stats span:last-child {
+    font-size: 0.6rem !important;
+    letter-spacing: 0.04em !important;
+  }
+
+  /* About Hero Centered Metrics */
+  .about-hero-stats {
+    gap: 0.75rem !important;
+    padding-top: 1rem !important;
+    margin-top: 2rem !important;
+  }
+
+  .about-hero-stats .font-heading {
+    font-size: clamp(1.2rem, 4.5vw, 1.45rem) !important;
+    white-space: nowrap !important;
+    line-height: 1.1 !important;
+  }
+
+  .about-hero-stats span:last-child {
+    font-size: 0.58rem !important;
+    letter-spacing: 0.03em !important;
+    line-height: 1.2 !important;
+  }
+
+  /* Home 2 Heading - Ensure Living Architecture fits comfortably without truncation */
+  .hero-home2-heading {
+    font-size: clamp(1.6rem, 5.8vw, 2.35rem) !important;
+    line-height: 1.18 !important;
+    letter-spacing: 0.01em !important;
+  }
+
+  /* Hero Floating Badge on Image */
+  .hero-floating-badge {
+    bottom: 12px !important;
+    left: 12px !important;
+    right: 12px !important;
+    padding: 0.65rem 0.85rem !important;
+    gap: 0.5rem !important;
+  }
+
+  .hero-badge-logo {
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+  }
+
+  .hero-badge-title {
+    font-size: 0.78rem !important;
+  }
+
+  .hero-badge-sub {
+    font-size: 0.62rem !important;
+  }
+
+  .hero-badge-status {
+    font-size: 0.68rem !important;
+    padding: 0.2rem 0.55rem !important;
+  }
+
+  /* Home 2 Filmstrip Movement Panels & Meta Pills */
+  .filmstrip-expanded-content {
+    padding: 1.35rem 1.1rem !important;
+  }
+
+  .filmstrip-title {
+    font-size: clamp(1.2rem, 4.5vw, 1.55rem) !important;
+  }
+
+  .filmstrip-desc {
+    font-size: 0.82rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 0.85rem !important;
+  }
+
+  .filmstrip-meta-pills {
+    gap: 0.35rem !important;
+    margin-bottom: 1.15rem !important;
+  }
+
+  .meta-pill {
+    font-size: clamp(0.62rem, 1.9vw, 0.72rem) !important;
+    padding: 0.2rem 0.48rem !important;
+    white-space: nowrap !important;
+  }
+
+  .filmstrip-cta-btn {
+    width: 100% !important;
+    max-width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 0.65rem 1.25rem !important;
+  }
+
+  /* Artist Roster Genre Badge - Never Stretch, Clean Fit */
+  .artist-overlay-genre {
+    align-self: flex-start !important;
+    width: fit-content !important;
+    max-width: 100% !important;
+    height: 26px !important;
+    line-height: 1 !important;
+    padding: 0 0.65rem !important;
+    font-size: 0.62rem !important;
+    white-space: nowrap !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Style Dive Showcase Pill - Stays Fully Inside Card Boundaries */
+  .style-trio-pill {
+    bottom: 0.85rem !important;
+    left: 0.75rem !important;
+    max-width: calc(100% - 1.5rem) !important;
+    padding: 0.35rem 0.75rem !important;
+    font-size: clamp(0.66rem, 2.2vw, 0.76rem) !important;
+    white-space: nowrap !important;
+  }
+
+  html[dir="rtl"] .style-trio-pill {
+    left: auto !important;
+    right: 0.75rem !important;
+  }
+
+  /* Compact Scroll-to-Top Button on Mobile Handhelds */
+  .scroll-top-btn {
+    bottom: 16px !important;
+    right: 16px !important;
+    width: 38px !important;
+    height: 38px !important;
+  }
+
+  html[dir="rtl"] .scroll-top-btn {
+    left: 16px !important;
+    right: auto !important;
+  }
+}
+
+/* ---------------- Specialty Cards & Mobile Handheld Action Buttons (max-width: 520px) ----------------
+   Covers: 360, 375, 393, 412, 427, 440px */
+@media (max-width: 520px) {
+  .hero-actions-wrap {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    max-width: 380px !important;
+    gap: 0.75rem !important;
+  }
+
+  .hero-actions-wrap .btn-primary,
+  .hero-actions-wrap .btn-secondary {
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  /* Specialty Cards Footers (Tattoo & Piercing Disciplines) */
+  .specialty-body {
+    padding: 1.25rem 1rem !important;
+  }
+
+  .specialty-card-footer {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0.85rem !important;
+    width: 100% !important;
+  }
+
+  .specialty-price {
+    text-align: left !important;
+    width: 100% !important;
+    font-size: 0.78rem !important;
+  }
+
+  html[dir="rtl"] .specialty-price {
+    text-align: right !important;
+  }
+
+  .specialty-card-footer .specialty-btn,
+  .specialty-card-footer .btn-primary {
+    width: 100% !important;
+    text-align: center !important;
+    justify-content: center !important;
+    padding: 0.7rem 1.25rem !important;
+  }
+
+  /* Founders Cards Footers (About Page) */
+  .founder-body {
+    padding: 1.25rem 1rem !important;
+  }
+
+  .founder-card-footer {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0.85rem !important;
+    width: 100% !important;
+  }
+
+  .founder-meta {
+    text-align: left !important;
+    width: 100% !important;
+    font-size: 0.76rem !important;
+    white-space: nowrap !important;
+  }
+
+  html[dir="rtl"] .founder-meta {
+    text-align: right !important;
+  }
+
+  .founder-card-footer .founder-btn,
+  .founder-card-footer .btn-secondary {
+    width: 100% !important;
+    text-align: center !important;
+    justify-content: center !important;
+    font-size: 0.8rem !important;
+    white-space: nowrap !important;
+  }
+
+  /* Services Matrix Custom Tattoo Cards (services.html) - Seamless Fit on Mobile */
+  .service-card-body {
+    padding: 1.35rem 1rem !important;
+  }
+
+  .service-card-footer {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 0.35rem !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .service-rate-label {
+    font-size: 0.68rem !important;
+    padding: 0.28rem 0.45rem !important;
+    gap: 0.3rem !important;
+  }
+
+  .service-action-link {
+    font-size: 0.72rem !important;
+    padding: 0.36rem 0.58rem !important;
+    gap: 0.25rem !important;
+  }
+
+  /* Diagnostic Triage Board Footer (aftercare.html) - Stack Cleanly on Mobile */
+  .diagnostic-board-footer {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 1rem !important;
+  }
+
+  .diagnostic-footer-info {
+    width: 100% !important;
+  }
+
+  .diagnostic-action-btn {
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 0.65rem 1.25rem !important;
+  }
+
+  /* Healing Pipeline Stage Cards (aftercare.html) - Perfect Alignment on Mobile */
+  .pipeline-card-top {
+    padding: 0.75rem 0.85rem !important;
+  }
+
+  .pipeline-card-content {
+    padding: 1.15rem 0.95rem !important;
+  }
+
+  .pipeline-status-label {
+    font-size: 0.68rem !important;
+    white-space: nowrap !important;
+  }
+}
+
+/* ---------------- Smallest Foldables & Compact Screens (max-width: 360px) ---------------- */
+@media (max-width: 360px) {
+  :root {
+    --header-height: 60px;
+  }
+
+  .brand-logo-img {
+    width: 34px;
+    height: 34px;
+  }
+
+  .brand-title {
+    font-size: 0.84rem;
+  }
+
+  .brand-subtitle {
+    font-size: 0.58rem;
+  }
+
+  .hero-heading {
+    font-size: 2.1rem;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+    text-wrap: balance;
+  }
+
+  .text-center .section-desc,
+  .text-center .section-description,
+  .section-desc.mx-auto,
+  .section-description.mx-auto {
+    text-wrap: balance;
+  }
+
+  .hero-stats-row {
+    gap: 0.35rem !important;
+  }
+
+  .hero-stats-row .stat-number {
+    font-size: 1.15rem !important;
+  }
+
+  .hero-stats-row .stat-label {
+    font-size: 0.5rem !important;
+    letter-spacing: 0.01em !important;
+  }
+}
+
+/* ---------------- Standard Mobile Handhelds (361px - 440px) ----------------
+   Includes: iPhone 13 Pro, iPhone 14/15/16 (390-393px), Pixel 7/8/9 (412px), etc. */
+@media (max-width: 480px) {
+  .btn-header-cta {
+    display: none;
+  }
+}
+
+@media (min-width: 361px) and (max-width: 440px) {
+  :root {
+    --header-height: 62px;
+  }
+
+  .hero-heading {
+    font-size: 2.35rem;
+  }
+
+  .section-title {
+    font-size: 1.95rem;
+    text-wrap: balance;
+  }
+
+  .text-center .section-desc,
+  .text-center .section-description,
+  .section-desc.mx-auto,
+  .section-description.mx-auto {
+    text-wrap: balance;
+  }
+
+  .craft-grid, .specialties-grid {
+    gap: 1.75rem;
+  }
+}
+
+/* ---------------- Small Tablets & Phablets (441px - 767px) ---------------- */
+@media (min-width: 441px) and (max-width: 767px) {
+  .hero-heading {
+    font-size: 2.85rem;
+  }
+
+  .artists-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ---------------- Mid Tablets & iPads (768px - 959px) ----------------
+   Includes: iPad Mini, iPad (768px, 820px) */
+@media (min-width: 768px) and (max-width: 959px) {
+  :root {
+    --header-height: 64px;
+  }
+
+  .hero-heading {
+    font-size: 3rem;
+  }
+
+  .artists-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.35rem;
+  }
+
+  .footer-top {
+    grid-template-columns: 1.15fr 1fr !important;
+    column-gap: clamp(2.25rem, 4vw, 3.5rem) !important;
+    row-gap: 2.5rem !important;
+  }
+
+  .footer-bottom {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding-right: 4.75rem !important;
+  }
+
+  .footer-bottom-links a,
+  .footer-bottom > div a {
+    white-space: nowrap !important;
+  }
+}
+
+/* ---------------- Large Tablets, Small Laptops & iPad Pro 13 (960px - 1080px) ----------------
+   Covers 960px and 1032px to maintain 2x2 footer alignment exactly matching reference */
+@media (min-width: 960px) and (max-width: 1080px) {
+  .hero-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+
+  .artists-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .footer-top {
+    display: grid !important;
+    grid-template-columns: 1.15fr 1fr !important;
+    column-gap: clamp(2.5rem, 4.5vw, 4rem) !important;
+    row-gap: 2.75rem !important;
+    margin-bottom: 2.75rem !important;
+  }
+
+  .footer-desc {
+    max-width: 440px !important;
+  }
+
+  .footer-bottom {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding-right: 4.75rem !important;
+  }
+
+  .footer-bottom-links a,
+  .footer-bottom > div a {
+    white-space: nowrap !important;
+  }
+}
+
+/* ---------------- Desktop Breakpoints (1024px+) ---------------- */
+@media (min-width: 1024px) {
+  .desktop-nav {
+    display: flex;
+    gap: 1.25rem;
+  }
+
+  .nav-link, .dropdown-trigger {
+    font-size: 0.82rem;
+  }
+}
+
+/* ---------------- Card Evenness & Alignment Enforcement ---------------- */
+.artist-card-even, .specialty-card-even {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.artist-card-body, .specialty-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  justify-content: space-between;
+}
+
+/* ---------------- Header CTA Icon Constraints ---------------- */
+.btn-header-cta svg {
+  width: 14px !important;
+  height: 14px !important;
+  max-width: 14px !important;
+  max-height: 14px !important;
+  min-width: 14px !important;
+  min-height: 14px !important;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* ---------------- RTL Mirroring Enhancements ---------------- */
+html[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir="rtl"] .dropdown-menu {
+  left: auto;
+  right: 0;
+}
+
+html[dir="rtl"] .dropdown-badge {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+html[dir="rtl"] .nav-link::after {
+  left: auto;
+  right: 0;
+}
+
+html[dir="rtl"] .brand-identity {
+  flex-direction: row;
+}
+
+html[dir="rtl"] .footer-social-row {
+  justify-content: flex-start;
+}
+
+html[dir="rtl"] .hero-floating-badge {
+  left: 18px;
+  right: 18px;
+}
+
+/* ---------------- Accessible Reduced Motion ---------------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  #page-loader {
+    display: none !important;
+  }
+}
+
+/* ---------------- Healing Pipeline Responsive Optimization ---------------- */
+@media (max-width: 639px) {
+  .healing-pipeline-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  
+  .pipeline-card-top {
+    padding: 0.85rem 1rem;
+  }
+  
+  .pipeline-card-content {
+    padding: 1.15rem 1rem;
+  }
+  
+  .pipeline-stage-title {
+    font-size: 1.05rem;
+    min-height: auto;
+    margin-bottom: 0.75rem;
+  }
+  
+  .pipeline-rule-item {
+    font-size: 0.76rem;
+    padding: 0.45rem 0.55rem;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .healing-pipeline-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .recovery-milestone-ribbon {
+    max-width: 600px;
+    margin-bottom: 2.5rem;
+  }
+}
+
+/* ---------------- Piercing Clinical Suite & Apothecary Shelf Responsive Rules ---------------- */
+@media (max-width: 639px) {
+  .piercing-clinical-suite {
+    gap: 1.25rem;
+  }
+  
+  .protocol-strip-card {
+    grid-template-columns: 1fr;
+  }
+  
+  .protocol-strip-media {
+    min-height: 180px;
+    aspect-ratio: 16/10;
+  }
+  
+  .diagnostic-triage-board {
+    padding: 1.25rem 1rem;
+  }
+  
+  .diagnostic-board-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+  }
+  
+  .diagnostic-compare-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .apothecary-counter-bar {
+    border-radius: 16px;
+    padding: 0.85rem 1rem;
+    gap: 0.75rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .counter-status-item {
+    font-size: 0.72rem;
+  }
+  
+  .apothecary-shelf-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .piercing-clinical-suite {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .diagnostic-compare-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .apothecary-shelf-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ---------------- Universal Horizontal Overflow Safeguard ---------------- */
+html, body {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden !important;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* ==========================================================================
+   HERO HEIGHT SYNCHRONIZATION ENFORCEMENT
+   1. Home pages occupy full viewport height based on screen size.
+   2. All remaining pages (About, Artists, Services, Aftercare, Contact)
+      maintain strictly identical height parity across every breakpoint.
+   ========================================================================== */
+
+/* 1. Home Pages Full Viewport Height */
+.hero-editorial,
+.hero-home2 {
+  min-height: calc(100vh - var(--header-height)) !important;
+  min-height: calc(100dvh - var(--header-height)) !important;
+  box-sizing: border-box !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* 2. All Remaining Pages Unified Equal Height */
+.hero-about,
+.hero-artists,
+.section-services-hero,
+.section-aftercare-hero,
+.section-contact-hero {
+  min-height: 520px !important;
+  box-sizing: border-box !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  padding: 5rem 0 4.5rem !important;
+  border-bottom: 1px solid var(--border-subtle) !important;
+}
+
+@media (max-width: 1023px) {
+  .hero-about,
+  .hero-artists,
+  .section-services-hero,
+  .section-aftercare-hero,
+  .section-contact-hero {
+    min-height: 500px !important;
+    padding: 4.5rem 0 4rem !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-about,
+  .hero-artists,
+  .section-services-hero,
+  .section-aftercare-hero,
+  .section-contact-hero {
+    min-height: 460px !important;
+    padding: 4rem 0 3.5rem !important;
+  }
+}
+

@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aftercare &amp; Healing Protocols | Tattoo &amp; Piercing Studio</title>
+  <meta name="description"
+    content="Official clinical aftercare guide for fresh tattoos and body piercings: 4-stage healing timeline, sterile saline irrigation, and apothecary recovery products.">
+  <link rel="icon" type="image/png" href="assets/images/logo/favicon.png">
+
+  <!-- Tailwind CSS CDN for utility support -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['class', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              red: '#ff1e44',
+              hover: '#e11d48',
+              dark: '#000000'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- External Stylesheets (CSS in css folder only) -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+
+  <!-- ================= 1. Branded Page Loader ================= -->
+  <div id="page-loader" role="status" aria-label="Loading Tattoo &amp; Piercing Studio">
+    <div class="loader-emblem-wrap">
+      <div class="loader-ring"></div>
+      <img src="assets/images/logo/logo.png" alt="Tattoo &amp; Piercing Studio Emblem" class="loader-logo-img">
+    </div>
+    <div class="loader-text">Tattoo &amp; Piercing Studio</div>
+    <div class="loader-progress-bar">
+      <div class="loader-progress-indicator"></div>
+    </div>
+  </div>
+
+  <!-- ================= 2. Fixed Compact Header (Same Unified Container) ================= -->
+  <header class="site-header" role="banner">
+    <div class="container-custom header-inner">
+
+      <!-- Brand Logo + Identity -->
+      <a href="index.html" class="brand-identity" aria-label="Tattoo &amp; Piercing Studio Home">
+        <img src="assets/images/logo/logo.png" alt="Tattoo &amp; Piercing Studio Logo" class="brand-logo-img">
+        <div class="brand-text-group">
+          <span class="brand-title">Tattoo &amp; Piercing</span>
+          <span class="brand-subtitle">Studio</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation - Exactly 6 Primary Items -->
+      <nav class="desktop-nav" role="navigation" aria-label="Main Navigation">
+
+        <!-- 1. Home (Click-Only Dropdown) -->
+        <div class="dropdown-container desktop-dropdown">
+          <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false"
+            id="homeDropdownBtn">
+            <span>Home</span>
+            <svg class="dropdown-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="dropdown-menu" role="menu" aria-labelledby="homeDropdownBtn">
+            <a href="index.html" class="dropdown-item" role="menuitem">
+              <span>Home 1</span>
+              <span class="dropdown-badge">Master</span>
+            </a>
+            <a href="home-2.html" class="dropdown-item" role="menuitem">
+              <span>Home 2</span>
+              <span class="dropdown-badge">Editorial</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 2. About -->
+        <a href="about.html" class="nav-link">About</a>
+
+        <!-- 3. Artists -->
+        <a href="artists.html" class="nav-link">Artists</a>
+
+        <!-- 4. Services -->
+        <a href="services.html" class="nav-link">Services</a>
+
+        <!-- 5. Aftercare Guide (Active) -->
+        <a href="aftercare.html" class="nav-link active">Aftercare</a>
+
+        <!-- 6. Contact (Directly Visible) -->
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Action Controls: RTL/LTR, Dark Mode, CTA Button & Mobile Toggle -->
+      <div class="header-actions">
+
+        <!-- RTL / LTR Toggle -->
+        <button type="button" class="icon-control-btn rtl-toggle-btn" aria-label="Toggle text direction"
+          title="Switch RTL/LTR">
+          <span class="rtl-indicator-text text-xs font-bold tracking-wider">LTR</span>
+        </button>
+
+        <!-- Dark / Light Mode Toggle -->
+        <button type="button" class="icon-control-btn theme-toggle-btn" aria-label="Toggle dark/light mode"
+          title="Toggle Theme">
+          <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="theme-icon-moon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <!-- CTA Button -->
+        <a href="#consultation" class="btn-header-cta" aria-label="Book Consultation Session">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="w-3.5 h-3.5 flex-shrink-0">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          <span>Book Session</span>
+        </a>
+
+        <!-- Mobile Menu Trigger -->
+        <button type="button" class="mobile-menu-btn" aria-label="Open navigation menu" aria-expanded="false"
+          aria-controls="mobileDrawer">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ================= 3. Mobile Navigation Drawer ================= -->
+  <div class="mobile-drawer-overlay" aria-hidden="true"></div>
+  <aside id="mobileDrawer" class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <div class="mobile-drawer-brand">
+        <img src="assets/images/logo/logo.png" alt="Tattoo &amp; Piercing Studio Logo">
+        <div class="brand-text-group">
+          <span class="brand-title">Tattoo &amp; Piercing</span>
+          <span class="brand-subtitle">Studio</span>
+        </div>
+      </div>
+      <button type="button" class="mobile-drawer-close icon-control-btn" aria-label="Close menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+          stroke-linejoin="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <div class="mobile-drawer-body">
+      <ul class="mobile-nav-list">
+        <!-- Mobile Accordion for Home (CLICK ONLY) -->
+        <li class="mobile-accordion">
+          <button type="button" class="mobile-accordion-toggle" aria-expanded="false">
+            <span>Home</span>
+            <svg class="mobile-accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="mobile-accordion-content">
+            <a href="index.html" class="mobile-sub-link">Home 1 (Master)</a>
+            <a href="home-2.html" class="mobile-sub-link">Home 2 (Editorial)</a>
+          </div>
+        </li>
+
+        <li><a href="about.html" class="mobile-nav-link">About Studio</a></li>
+        <li><a href="artists.html" class="mobile-nav-link">Resident Artists</a></li>
+        <li><a href="services.html" class="mobile-nav-link">Services &amp; Pricing</a></li>
+        <li><a href="aftercare.html" class="mobile-nav-link active">Aftercare Guide</a></li>
+        <li><a href="contact.html" class="mobile-nav-link">Contact Studio</a></li>
+      </ul>
+
+      <div class="mobile-drawer-controls">
+        <div class="mobile-drawer-toggles">
+          <!-- Dark / Light Mode Toggle -->
+          <button type="button" class="mobile-control-tile theme-toggle-btn" aria-label="Toggle dark/light mode"
+            title="Toggle Theme">
+            <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg class="theme-icon-moon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+            <span>Theme</span>
+          </button>
+
+          <!-- RTL / LTR Toggle -->
+          <button type="button" class="mobile-control-tile rtl-toggle-btn" aria-label="Toggle text direction"
+            title="Switch RTL/LTR">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <polyline points="4 7 4 4 20 4 20 7"></polyline>
+              <line x1="9" y1="20" x2="15" y2="20"></line>
+              <line x1="12" y1="4" x2="12" y2="20"></line>
+            </svg>
+            <span class="rtl-indicator-text">LTR</span>
+          </button>
+        </div>
+
+        <a href="#consultation" class="btn-primary w-full justify-center">
+          <svg class="w-4 h-4 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          <span>Book Consultation</span>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ================= MAIN CONTENT (EXACTLY 5 SECTIONS) ================= -->
+  <main id="main-content">
+
+    <!-- ================= SECTION 1: HERO CENTERED WITH BACKGROUND IMAGE ================= -->
+    <section class="section-aftercare-hero" aria-labelledby="aftercare-hero-title">
+      <img src="assets/images/aftercare/p40.jpg" alt="Clinical Barrier Care and Fresh Tattoo Healing Setup"
+        class="aftercare-hero-bg">
+      <div class="aftercare-hero-overlay" aria-hidden="true"></div>
+
+      <div class="container-custom">
+        <div class="aftercare-hero-content">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-brand-red/40 bg-brand-red/10 text-brand-red text-xs font-bold tracking-wider uppercase mb-5">
+            <span class="w-2 h-2 rounded-full bg-brand-red animate-pulse"></span>
+            <span>Clinical Recovery Guidelines</span>
+          </div>
+
+          <h1 id="aftercare-hero-title"
+            class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-white mb-5 uppercase">
+            Artisan Aftercare &amp; <span class="text-brand-red">Healing Protocols</span>
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-200 max-w-2xl mx-auto leading-relaxed mb-8">
+            Doctor-formulated recovery milestones engineered to preserve deep pigment saturation, razor-sharp
+            needlework, and irritation-free body piercings.
+          </p>
+
+          <div class="flex flex-wrap items-center justify-center gap-4">
+            <a href="#healing-timeline" class="btn-primary">
+              <span>Tattoo Timeline</span>
+              <svg class="w-4 h-4 ml-1 inline-block" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2.5">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </a>
+            <a href="#piercing-protocols" class="btn-secondary">
+              <span>Piercing Care</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 2: 4-STAGE CHRONOLOGICAL HEALING PIPELINE ================= -->
+    <section id="healing-timeline" class="section-healing-timeline" aria-labelledby="healing-timeline-heading">
+      <div class="container-custom">
+
+        <div class="text-center max-w-3xl mx-auto mb-10">
+          <span class="section-tagline">Cellular Recovery Protocol</span>
+          <h2 id="healing-timeline-heading" class="section-title text-3xl sm:text-4xl md:text-5xl font-black mt-2">
+            4-Stage Tattoo <span class="text-brand-red">Healing Journey</span>
+          </h2>
+          <div class="section-divider"></div>
+          <p class="section-description">
+            Chronological medical-grade milestones engineered to lock in crisp pigment and prevent scab trauma.
+          </p>
+        </div>
+
+        <!-- Overhead Chronological Milestone Ribbon (Connects All 4 Stages) -->
+        <div class="recovery-milestone-ribbon" role="list" aria-label="Healing Stages Overview">
+          <div class="milestone-ribbon-track" aria-hidden="true"></div>
+
+          <div class="milestone-ribbon-step active" role="listitem">
+            <span class="milestone-step-dot">01</span>
+            <div class="milestone-step-meta">
+              <span class="milestone-step-name">Shield Film</span>
+              <span class="milestone-step-time">Days 1–3</span>
+            </div>
+          </div>
+
+          <div class="milestone-ribbon-step" role="listitem">
+            <span class="milestone-step-dot">02</span>
+            <div class="milestone-step-meta">
+              <span class="milestone-step-name">Aseptic Wash</span>
+              <span class="milestone-step-time">Days 4–7</span>
+            </div>
+          </div>
+
+          <div class="milestone-ribbon-step" role="listitem">
+            <span class="milestone-step-dot">03</span>
+            <div class="milestone-step-meta">
+              <span class="milestone-step-name">Balm Hydration</span>
+              <span class="milestone-step-time">Days 8–14</span>
+            </div>
+          </div>
+
+          <div class="milestone-ribbon-step" role="listitem">
+            <span class="milestone-step-dot">04</span>
+            <div class="milestone-step-meta">
+              <span class="milestone-step-name">SPF Defense</span>
+              <span class="milestone-step-time">Days 15–30+</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4-Stage New Chronological Pipeline Grid (Minimal Text & Direct DO/DON'T Rules) -->
+        <div class="healing-pipeline-grid">
+
+          <!-- Stage 1 -->
+          <article class="pipeline-stage-card">
+            <div class="pipeline-card-top">
+              <div class="pipeline-stage-badge">
+                <span class="pipeline-num">01</span>
+                <span class="pipeline-phase">Phase One</span>
+              </div>
+              <span class="pipeline-time-pill">Days 1 – 3</span>
+            </div>
+
+            <div class="pipeline-media-frame">
+              <img src="assets/images/aftercare/aftercare-stage1-wrap.jpg"
+                alt="Second-Skin Medical Film Barrier on Fresh Forearm Tattoo" loading="lazy">
+              <span class="pipeline-photo-tag">Barrier Film</span>
+            </div>
+
+            <div class="pipeline-card-content">
+              <h3 class="pipeline-stage-title">Second-Skin Shield</h3>
+
+              <!-- Direct Concise Action Rules (Minimal Text) -->
+              <div class="pipeline-rules-list">
+                <div class="pipeline-rule-item rule-positive">
+                  <span class="rule-icon-mark" aria-hidden="true">&#10003;</span>
+                  <p class="rule-text">Keep breathable film sealed 48–72h</p>
+                </div>
+                <div class="pipeline-rule-item rule-negative">
+                  <span class="rule-icon-mark" aria-hidden="true">&#10005;</span>
+                  <p class="rule-text">Never rip off dry; soak in warm water</p>
+                </div>
+              </div>
+
+              <div class="pipeline-card-footer">
+                <span class="pipeline-status-label">
+                  <span class="pipeline-status-dot"></span>
+                  Plasma Barrier Active
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Stage 2 -->
+          <article class="pipeline-stage-card">
+            <div class="pipeline-card-top">
+              <div class="pipeline-stage-badge">
+                <span class="pipeline-num">02</span>
+                <span class="pipeline-phase">Phase Two</span>
+              </div>
+              <span class="pipeline-time-pill">Days 4 – 7</span>
+            </div>
+
+            <div class="pipeline-media-frame">
+              <img src="assets/images/aftercare/aftercare-stage2-wash.jpg"
+                alt="Hands Gently Washing Tattoo with Foamy Water in Studio Sink" loading="lazy">
+              <span class="pipeline-photo-tag">Aseptic Wash</span>
+            </div>
+
+            <div class="pipeline-card-content">
+              <h3 class="pipeline-stage-title">Gentle Cleansing</h3>
+
+              <!-- Direct Concise Action Rules (Minimal Text) -->
+              <div class="pipeline-rules-list">
+                <div class="pipeline-rule-item rule-positive">
+                  <span class="rule-icon-mark" aria-hidden="true">&#10003;</span>
+                  <p class="rule-text">Wash 2x daily with foam soap &amp; pat dry</p>
+                </div>
+                <div class="pipeline-rule-item rule-negative">
+                  <span class="rule-icon-mark" aria-hidden="true">&#10005;</span>
+                  <p class="rule-text">No bathtubs, saunas, or swimming pools</p>
+                </div>
+              </div>
+
+              <div class="pipeline-card-footer">
+                <span class="pipeline-status-label">
+                  <span class="pipeline-status-dot"></span>
+                  Fragrance-Free Soap
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Stage 3 -->
+          <article class="pipeline-stage-card">
+            <div class="pipeline-card-top">
+              <div class="pipeline-stage-badge">
+                <span class="pipeline-num">03</span>
+                <span class="pipeline-phase">Phase Three</span>
+              </div>
+              <span class="pipeline-time-pill">Days 8 – 14</span>
+            </div>
+
+            <div class="pipeline-media-frame">
+              <img src="assets/images/aftercare/aftercare-stage3-moisturize.jpg"
+                alt="Applying Amber Jar Organic Botanical Balm to Healing Floral Tattoo" loading="lazy">
+              <span class="pipeline-photo-tag">Balm Hydration</span>
+            </div>
+
+            <div class="pipeline-card-content">
+              <h3 class="pipeline-stage-title">Botanical Balm</h3>
+
+              <!-- Direct Concise Action Rules (Minimal Text) -->
+              <div class="pipeline-rules-list">
+                <div class="pipeline-rule-item rule-positive">
+                  <span class="rule-icon-mark" aria-hidden="true">&#10003;</span>
+                  <p class="rule-text">Apply micro-thin layer of balm 2x daily</p>
+                </div>
+                <div class="pipeline-rule-item rule-negative">
+                  <span class="rule-icon-mark" aria-hidden="true">&#10005;</span>
+                  <p class="rule-text">Never scratch or pick peeling skin flakes</p>
+                </div>
+              </div>
+
+              <div class="pipeline-card-footer">
+                <span class="pipeline-status-label">
+                  <span class="pipeline-status-dot"></span>
+                  Micro-Layer Hydration
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Stage 4 -->
+          <article class="pipeline-stage-card">
+            <div class="pipeline-card-top">
+              <div class="pipeline-stage-badge">
+                <span class="pipeline-num">04</span>
+                <span class="pipeline-phase">Phase Four</span>
+              </div>
+              <span class="pipeline-time-pill">Days 15 – 30+</span>
+            </div>
+
+            <div class="pipeline-media-frame">
+              <img src="assets/images/aftercare/aftercare-stage4-sunscreen.jpg"
+                alt="Applying Mineral Sunscreen Lotion on Healed Tattoo Arm" loading="lazy">
+              <span class="pipeline-photo-tag">SPF Guard</span>
+            </div>
+
+            <div class="pipeline-card-content">
+              <h3 class="pipeline-stage-title">Pigment Defense</h3>
+
+              <!-- Direct Concise Action Rules (Minimal Text) -->
+              <div class="pipeline-rules-list">
+                <div class="pipeline-rule-item rule-positive">
+                  <span class="rule-icon-mark" aria-hidden="true">&#10003;</span>
+                  <p class="rule-text">Apply mineral SPF 50+ before sun exposure</p>
+                </div>
+                <div class="pipeline-rule-item rule-negative">
+                  <span class="rule-icon-mark" aria-hidden="true">&#10005;</span>
+                  <p class="rule-text">Avoid UV rays to prevent pigment fading</p>
+                </div>
+              </div>
+
+              <div class="pipeline-card-footer">
+                <span class="pipeline-status-label">
+                  <span class="pipeline-status-dot"></span>
+                  Broad-Spectrum SPF 50+
+                </span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= SECTION 3: PRECISION PIERCING PROTOCOLS ================= -->
+    <!-- ================= SECTION 3: ASYMMETRIC PIERCING PROTOCOL & DIAGNOSTIC SUITE ================= -->
+    <section id="piercing-protocols" class="section-aftercare-piercing" aria-labelledby="piercing-protocols-heading">
+      <div class="container-custom">
+
+        <div class="text-center max-w-3xl mx-auto mb-10">
+          <span class="section-tagline">Anatomy Care</span>
+          <h2 id="piercing-protocols-heading" class="section-title text-3xl sm:text-4xl md:text-5xl font-black mt-2">
+            Piercing Care &amp; <span class="text-brand-red">Diagnostic Suite</span>
+          </h2>
+          <div class="section-divider"></div>
+          <p class="section-description">
+            Sterile irrigation protocols paired with instant clinical triage to identify healthy tissue versus
+            complications.
+          </p>
+        </div>
+
+        <!-- 2-Column Split: Horizontal Care Strips Left + Diagnostic Triage Board Right -->
+        <div class="piercing-clinical-suite">
+
+          <!-- Left Column: 2 Horizontal Care Protocol Strips -->
+          <div class="piercing-strips-col">
+
+            <!-- Strip 1: Saline Irrigation -->
+            <article class="protocol-strip-card">
+              <div class="protocol-strip-media">
+                <img src="assets/images/aftercare/aftercare-piercing-saline.jpg"
+                  alt="Pharmaceutical Grade Sterile Saline Mist Spray" loading="lazy">
+                <span class="protocol-strip-tag">Daily Cleanse</span>
+              </div>
+              <div class="protocol-strip-body">
+                <div class="protocol-strip-header">
+                  <h3 class="protocol-strip-title">Sterile Saline Irrigation</h3>
+                  <span class="protocol-badge-pill">0.9% USP &bull; 2x Daily</span>
+                </div>
+                <div class="protocol-micro-rules">
+                  <div class="micro-rule rule-check">
+                    <span class="micro-rule-icon">&#10003;</span>
+                    <span>Spray both sides twice daily; air dry or pat with sterile gauze</span>
+                  </div>
+                  <div class="micro-rule rule-cross">
+                    <span class="micro-rule-icon">&#10005;</span>
+                    <span>Zero alcohol, hydrogen peroxide, ointments, or jewelry twisting</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Strip 2: Mandatory Downsizing -->
+            <article class="protocol-strip-card">
+              <div class="protocol-strip-media">
+                <img src="assets/images/aftercare/aftercare-piercing-downsize.jpg"
+                  alt="ASTM F-136 Titanium Labret Posts for Downsizing" loading="lazy">
+                <span class="protocol-strip-tag">Milestone Check</span>
+              </div>
+              <div class="protocol-strip-body">
+                <div class="protocol-strip-header">
+                  <h3 class="protocol-strip-title">Titanium Post Downsizing</h3>
+                  <span class="protocol-badge-pill">Weeks 4–6 &bull; Free Service</span>
+                </div>
+                <div class="protocol-micro-rules">
+                  <div class="micro-rule rule-check">
+                    <span class="micro-rule-icon">&#10003;</span>
+                    <span>Swap to shorter snug post once initial swelling has fully subsided</span>
+                  </div>
+                  <div class="micro-rule rule-check">
+                    <span class="micro-rule-icon">&#10003;</span>
+                    <span>Prevents permanent angle migration, hair snagging, and friction bumps</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+
+          <!-- Right Column: Comparative Clinical Diagnostic Triage Board -->
+          <div class="diagnostic-triage-board">
+            <div class="diagnostic-board-top">
+              <div class="diagnostic-board-title-row">
+                <svg class="diagnostic-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                </svg>
+                <h3 class="diagnostic-board-title">Clinical Diagnostic Triage</h3>
+              </div>
+              <span class="diagnostic-subtitle">Self-Evaluation Guide</span>
+            </div>
+
+            <div class="diagnostic-compare-grid">
+
+              <!-- Healthy Healing (Green) -->
+              <div class="diagnostic-column col-healthy">
+                <div class="diagnostic-col-header">
+                  <span class="diagnostic-status-dot dot-green"></span>
+                  <span class="diagnostic-col-name">Normal Healing</span>
+                </div>
+                <ul class="diagnostic-bullet-list">
+                  <li>
+                    <span class="bullet-symbol">&#10003;</span>
+                    <span>Clear or pale straw-colored fluid that dries into light crusties</span>
+                  </li>
+                  <li>
+                    <span class="bullet-symbol">&#10003;</span>
+                    <span>Mild localized tenderness during the first 7–14 days</span>
+                  </li>
+                  <li>
+                    <span class="bullet-symbol">&#10003;</span>
+                    <span>Gradual reduction in swelling each subsequent week</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Warning Signs (Red) -->
+              <div class="diagnostic-column col-warning">
+                <div class="diagnostic-col-header">
+                  <span class="diagnostic-status-dot dot-red"></span>
+                  <span class="diagnostic-col-name">Seek Studio Help</span>
+                </div>
+                <ul class="diagnostic-bullet-list">
+                  <li>
+                    <span class="bullet-symbol">&#10005;</span>
+                    <span>Thick green, dark yellow, or foul-smelling continuous discharge</span>
+                  </li>
+                  <li>
+                    <span class="bullet-symbol">&#10005;</span>
+                    <span>Throbbing radiating heat with spreading redness past the piercing</span>
+                  </li>
+                  <li>
+                    <span class="bullet-symbol">&#10005;</span>
+                    <span>Systemic fever, chills, or escalating severe sharp pain</span>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+
+            <div class="diagnostic-board-footer">
+              <div class="diagnostic-footer-info">
+                <span class="diagnostic-pulse-badge">Free Studio Check</span>
+                <p class="diagnostic-footer-text">Walk into our studio lobby anytime for an in-person evaluation by a
+                  resident piercer.</p>
+              </div>
+              <a href="#consultation" class="diagnostic-action-btn" aria-label="Book In-Person Diagnostic Check">
+                <span>Book Check</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= SECTION 4: APOTHECARY COUNTER DISPENSER SHELF ================= -->
+    <section class="section-aftercare-apothecary" aria-labelledby="apothecary-heading">
+      <div class="container-custom">
+
+        <div class="text-center max-w-3xl mx-auto mb-10">
+          <span class="section-tagline">Studio Apothecary</span>
+          <h2 id="apothecary-heading" class="section-title text-3xl sm:text-4xl md:text-5xl font-black mt-2">
+            Clinical Recovery <span class="text-brand-red">Formulations</span>
+          </h2>
+          <div class="section-divider"></div>
+          <p class="section-description">
+            Medical-grade, dermatologist-approved formulations stocked directly at our studio front desk.
+          </p>
+        </div>
+
+        <!-- Overhead Apothecary Counter Status Bar -->
+        <div class="apothecary-counter-bar">
+          <div class="counter-status-item">
+            <span class="counter-dot"></span>
+            <span>Hospital-Grade Dermatology Standards</span>
+          </div>
+          <div class="counter-status-item">
+            <span class="counter-dot"></span>
+            <span>Direct In-Studio Front Desk Pickup</span>
+          </div>
+          <div class="counter-status-item">
+            <span class="counter-dot"></span>
+            <span>Zero Synthetic Fragrances or Dyes</span>
+          </div>
+        </div>
+
+        <!-- 3-Bay Horizontal Product Shelf -->
+        <div class="apothecary-shelf-grid">
+
+          <!-- Product 1: Balm -->
+          <article class="apothecary-shelf-card">
+            <div class="shelf-card-thumb">
+              <img src="assets/images/aftercare/aftercare-product-balm.jpg"
+                alt="Amber Jar Botanical Tattoo Healing Balm" loading="lazy">
+              <span class="shelf-thumb-tag">Tattoo</span>
+            </div>
+            <div class="shelf-card-info">
+              <div class="shelf-cat-row">
+                <span class="shelf-category">Cellular Recovery</span>
+                <span class="shelf-stock-pill">In Stock</span>
+              </div>
+              <h3 class="shelf-product-title">Botanical Healing Balm</h3>
+              <p class="shelf-actives-text">Raw Shea Butter &bull; Vitamin E &bull; Chamomile</p>
+              <div class="shelf-price-row">
+                <span class="shelf-price">$18.00</span>
+                <span class="shelf-unit">2 oz Jar</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 2: Saline Spray -->
+          <article class="apothecary-shelf-card">
+            <div class="shelf-card-thumb">
+              <img src="assets/images/aftercare/aftercare-product-spray.jpg"
+                alt="Sleek Black Isotonic Saline Spray Canister" loading="lazy">
+              <span class="shelf-thumb-tag">Piercing</span>
+            </div>
+            <div class="shelf-card-info">
+              <div class="shelf-cat-row">
+                <span class="shelf-category">Sterile Irrigation</span>
+                <span class="shelf-stock-pill">In Stock</span>
+              </div>
+              <h3 class="shelf-product-title">Isotonic Sterile Mist</h3>
+              <p class="shelf-actives-text">Pure 0.9% USP Sodium Chloride &bull; Airless Nozzle</p>
+              <div class="shelf-price-row">
+                <span class="shelf-price">$14.00</span>
+                <span class="shelf-unit">100ml Spray</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 3: Sunscreen Shield -->
+          <article class="apothecary-shelf-card">
+            <div class="shelf-card-thumb">
+              <img src="assets/images/aftercare/aftercare-stage4-sunscreen.jpg"
+                alt="Mineral Broad Spectrum SPF 50 Tattoo Pigment Shield" loading="lazy">
+              <span class="shelf-thumb-tag">Lifelong</span>
+            </div>
+            <div class="shelf-card-info">
+              <div class="shelf-cat-row">
+                <span class="shelf-category">Pigment Defense</span>
+                <span class="shelf-stock-pill">In Stock</span>
+              </div>
+              <h3 class="shelf-product-title">Mineral SPF 50+ Shield</h3>
+              <p class="shelf-actives-text">Non-Nano Zinc Oxide &bull; Broad UVA/UVB Guard</p>
+              <div class="shelf-price-row">
+                <span class="shelf-price">$22.00</span>
+                <span class="shelf-unit">3.4 oz Tube</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= SECTION 5: EMERGENCY HEALING SUPPORT & CONSULTATION CTA ================= -->
+    <section id="consultation" class="section-aftercare-cta" aria-labelledby="aftercare-cta-heading">
+      <img src="assets/images/aftercare/p38.jpg" alt="Studio Consultation Room and Sterile Setup"
+        class="aftercare-cta-bg">
+      <div class="absolute inset-0 bg-black/75 pointer-events-none" aria-hidden="true"></div>
+
+      <div class="container-custom relative z-10 text-center">
+        <span
+          class="inline-block px-3 py-1 rounded-full border border-brand-red/50 bg-brand-red/20 text-brand-red text-xs font-bold uppercase tracking-widest mb-4">
+          Clinical Assistance
+        </span>
+        <h2 id="aftercare-cta-heading"
+          class="text-3xl sm:text-4xl md:text-5xl font-black text-white uppercase tracking-tight mb-4">
+          Need An In-Person <span class="text-brand-red">Healing Check?</span>
+        </h2>
+        <p class="text-base sm:text-lg text-slate-200 max-w-2xl mx-auto mb-8 leading-relaxed"
+          style="text-wrap: balance;">
+          Unsure about redness or ready for your piercing downsizing? Our studio provides complimentary in-person
+          healing assessments 7 days a week.
+        </p>
+
+        <div class="cta-actions-group flex flex-wrap items-center justify-center gap-4 mb-8">
+          <a href="contact.html" class="btn-primary">
+            <span>Book In-Person Check</span>
+            <svg class="w-4 h-4 ml-1 inline-block" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.5">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </a>
+          <a href="tel:+18005558288" class="btn-secondary">
+            <svg class="w-4 h-4 mr-1 inline-block" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+              </path>
+            </svg>
+            <span>Call Aftercare Hotline (+1 800-555-8288)</span>
+          </a>
+        </div>
+
+        <p class="text-xs text-slate-400">
+          Walk-ins welcome for downsizing &bull; Always consult a medical physician if experiencing systemic symptoms
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= Scroll to Top Button ================= -->
+  <button type="button" class="scroll-top-btn" aria-label="Scroll back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+      stroke-linejoin="round" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- ================= FOOTER (Same Unified Container) ================= -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container-custom">
+      <div class="footer-top">
+
+        <!-- Brand Info -->
+        <div class="footer-brand-col">
+          <div class="footer-logo-row">
+            <img src="assets/images/logo/logo.png" alt="Tattoo &amp; Piercing Studio" class="footer-logo-img">
+            <div class="brand-text-group">
+              <span class="brand-title">Tattoo &amp; Piercing</span>
+              <span class="brand-subtitle">Studio</span>
+            </div>
+          </div>
+          <p class="footer-desc">
+            Master custom tattoo craftsmanship and surgical-grade sterile body piercing by resident master artists.
+            Where artistic skin illustration meets medical-grade precision.
+          </p>
+          <div class="footer-social-row">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn"
+              aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn"
+              aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn"
+              aria-label="TikTok">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+              </svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn"
+              aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.08C5.12 19.54 12 19.54 12 19.54s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.41z">
+                </path>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Navigation -->
+        <div>
+          <h3 class="footer-heading">Studio</h3>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home 1 (Master)</a></li>
+            <li><a href="home-2.html">Home 2 (Editorial)</a></li>
+            <li><a href="about.html">About Studio</a></li>
+            <li><a href="artists.html">Resident Artists</a></li>
+            <li><a href="services.html">Services &amp; Pricing</a></li>
+            <li><a href="aftercare.html">Aftercare Guide</a></li>
+          </ul>
+        </div>
+
+        <!-- Specialties -->
+        <div>
+          <h3 class="footer-heading">Styles</h3>
+          <ul class="footer-links-list">
+            <li><a href="artists.html">Black &amp; Grey Realism</a></li>
+            <li><a href="artists.html">Traditional Japanese</a></li>
+            <li><a href="artists.html">Neo-Traditional</a></li>
+            <li><a href="artists.html">Fine Line &amp; Micro</a></li>
+            <li><a href="services.html">Titanium Piercing</a></li>
+            <li><a href="services.html">Custom Redesign</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact & Hours -->
+        <div>
+          <h3 class="footer-heading">Visit Studio</h3>
+          <div class="footer-contact-item">
+            <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span>420 Ink &amp; Steel Boulevard, Art District, NY 10012</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+              </path>
+            </svg>
+            <span>+1 (800) 555-8288</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            <span>Mon - Sat: 11:00 AM - 9:00 PM<br>Sun: 12:00 PM - 7:00 PM</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Tattoo &amp; Piercing Studio. All Rights Reserved. Clean art, sterile environment.</p>
+        <div class="flex items-center gap-6">
+          <a href="aftercare.html" class="hover:text-brand-red transition-colors">Aftercare Instructions</a>
+          <a href="contact.html" class="hover:text-brand-red transition-colors">Consultations</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- External JavaScript (JS in js folder only) -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tattoo &amp; Piercing Services | Tattoo &amp; Piercing Studio</title>
+  <meta name="description"
+    content="Explore custom tattoo disciplines and hospital-grade body piercing services with implant-grade ASTM F-136 titanium and solid 14K gold jewelry.">
+  <link rel="icon" type="image/png" href="assets/images/logo/favicon.png">
+
+  <!-- Tailwind CSS CDN for utility support -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['class', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              red: '#ff1e44',
+              hover: '#e11d48',
+              dark: '#000000'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- External Stylesheets (CSS in css folder only) -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+
+  <!-- ================= 1. Branded Page Loader ================= -->
+  <div id="page-loader" role="status" aria-label="Loading Tattoo &amp; Piercing Studio">
+    <div class="loader-emblem-wrap">
+      <div class="loader-ring"></div>
+      <img src="assets/images/logo/logo.png" alt="Tattoo &amp; Piercing Studio Emblem" class="loader-logo-img">
+    </div>
+    <div class="loader-text">Tattoo &amp; Piercing Studio</div>
+    <div class="loader-progress-bar">
+      <div class="loader-progress-indicator"></div>
+    </div>
+  </div>
+
+  <!-- ================= 2. Fixed Compact Header (Same Unified Container) ================= -->
+  <header class="site-header" role="banner">
+    <div class="container-custom header-inner">
+
+      <!-- Brand Logo + Identity -->
+      <a href="index.html" class="brand-identity" aria-label="Tattoo &amp; Piercing Studio Home">
+        <img src="assets/images/logo/logo.png" alt="Tattoo &amp; Piercing Studio Logo" class="brand-logo-img">
+        <div class="brand-text-group">
+          <span class="brand-title">Tattoo &amp; Piercing</span>
+          <span class="brand-subtitle">Studio</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation - Exactly 6 Primary Items -->
+      <nav class="desktop-nav" role="navigation" aria-label="Main Navigation">
+
+        <!-- 1. Home (Click-Only Dropdown) -->
+        <div class="dropdown-container desktop-dropdown">
+          <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false"
+            id="homeDropdownBtn">
+            <span>Home</span>
+            <svg class="dropdown-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="dropdown-menu" role="menu" aria-labelledby="homeDropdownBtn">
+            <a href="index.html" class="dropdown-item" role="menuitem">
+              <span>Home 1</span>
+              <span class="dropdown-badge">Master</span>
+            </a>
+            <a href="home-2.html" class="dropdown-item" role="menuitem">
+              <span>Home 2</span>
+              <span class="dropdown-badge">Editorial</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 2. About -->
+        <a href="about.html" class="nav-link">About</a>
+
+        <!-- 3. Artists -->
+        <a href="artists.html" class="nav-link">Artists</a>
+
+        <!-- 4. Services (Active) -->
+        <a href="services.html" class="nav-link active">Services</a>
+
+        <!-- 5. Aftercare Guide -->
+        <a href="aftercare.html" class="nav-link">Aftercare</a>
+
+        <!-- 6. Contact (Directly Visible) -->
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Action Controls: RTL/LTR, Dark Mode, CTA Button & Mobile Toggle -->
+      <div class="header-actions">
+
+        <!-- RTL / LTR Toggle -->
+        <button type="button" class="icon-control-btn rtl-toggle-btn" aria-label="Toggle text direction"
+          title="Switch RTL/LTR">
+          <span class="rtl-indicator-text text-xs font-bold tracking-wider">LTR</span>
+        </button>
+
+        <!-- Dark / Light Mode Toggle -->
+        <button type="button" class="icon-control-btn theme-toggle-btn" aria-label="Toggle dark/light mode"
+          title="Toggle Theme">
+          <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="theme-icon-moon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <!-- CTA Button -->
+        <a href="#consultation" class="btn-header-cta" aria-label="Book Consultation Session">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="w-3.5 h-3.5 flex-shrink-0">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          <span>Book Session</span>
+        </a>
+
+        <!-- Mobile Menu Trigger -->
+        <button type="button" class="mobile-menu-btn" aria-label="Open navigation menu" aria-expanded="false"
+          aria-controls="mobileDrawer">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ================= 3. Mobile Navigation Drawer ================= -->
+  <div class="mobile-drawer-overlay" aria-hidden="true"></div>
+  <aside id="mobileDrawer" class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <div class="mobile-drawer-brand">
+        <img src="assets/images/logo/logo.png" alt="Tattoo &amp; Piercing Studio Logo">
+        <div class="brand-text-group">
+          <span class="brand-title">Tattoo &amp; Piercing</span>
+          <span class="brand-subtitle">Studio</span>
+        </div>
+      </div>
+      <button type="button" class="mobile-drawer-close icon-control-btn" aria-label="Close menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+          stroke-linejoin="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <div class="mobile-drawer-body">
+      <ul class="mobile-nav-list">
+        <!-- Mobile Accordion for Home (CLICK ONLY) -->
+        <li class="mobile-accordion">
+          <button type="button" class="mobile-accordion-toggle" aria-expanded="false">
+            <span>Home</span>
+            <svg class="mobile-accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="mobile-accordion-content">
+            <a href="index.html" class="mobile-sub-link">Home 1 (Master)</a>
+            <a href="home-2.html" class="mobile-sub-link">Home 2 (Editorial)</a>
+          </div>
+        </li>
+
+        <li><a href="about.html" class="mobile-nav-link">About Studio</a></li>
+        <li><a href="artists.html" class="mobile-nav-link">Resident Artists</a></li>
+        <li><a href="services.html" class="mobile-nav-link active">Services &amp; Pricing</a></li>
+        <li><a href="aftercare.html" class="mobile-nav-link">Aftercare Guide</a></li>
+        <li><a href="contact.html" class="mobile-nav-link">Contact Studio</a></li>
+      </ul>
+
+      <div class="mobile-drawer-controls">
+        <div class="mobile-drawer-toggles">
+          <!-- Dark / Light Mode Toggle -->
+          <button type="button" class="mobile-control-tile theme-toggle-btn" aria-label="Toggle dark/light mode"
+            title="Toggle Theme">
+            <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg class="theme-icon-moon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+            <span>Theme</span>
+          </button>
+
+          <!-- RTL / LTR Toggle -->
+          <button type="button" class="mobile-control-tile rtl-toggle-btn" aria-label="Toggle text direction"
+            title="Switch RTL/LTR">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <polyline points="4 7 4 4 20 4 20 7"></polyline>
+              <line x1="9" y1="20" x2="15" y2="20"></line>
+              <line x1="12" y1="4" x2="12" y2="20"></line>
+            </svg>
+            <span class="rtl-indicator-text">LTR</span>
+          </button>
+        </div>
+
+        <a href="#consultation" class="btn-primary w-full justify-center">
+          <svg class="w-4 h-4 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          <span>Book Consultation</span>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ================= MAIN CONTENT (EXACTLY 5 SECTIONS) ================= -->
+  <main id="main-content">
+
+    <!-- ================= SECTION 1: HERO CENTERED WITH BACKGROUND IMAGE ================= -->
+    <section class="section-services-hero" aria-labelledby="services-hero-title">
+      <img src="assets/images/services/services-hero-bg.jpg"
+        alt="Artisan Tattoo and Sterile Piercing Studio Workstation" class="services-hero-bg">
+      <div class="services-hero-overlay" aria-hidden="true"></div>
+
+      <div class="container-custom">
+        <div class="services-hero-content">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-brand-red/40 bg-brand-red/10 text-brand-red text-xs font-bold tracking-wider uppercase mb-5">
+            <span class="w-2 h-2 rounded-full bg-brand-red animate-pulse"></span>
+            <span>Tattoo &amp; Piercing Disciplines</span>
+          </div>
+
+          <h1 id="services-hero-title"
+            class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-white mb-5 uppercase">
+            Bespoke Tattoo &amp; <span class="text-brand-red">Sterile Piercing</span>
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-200 max-w-2xl mx-auto leading-relaxed mb-8">
+            Permanent body art engineered for timeless anatomical harmony. Blade-pierced precision with certified ASTM
+            F-136 implant titanium.
+          </p>
+
+          <div class="flex flex-wrap items-center justify-center gap-4">
+            <a href="#tattoo-matrix" class="btn-primary">
+              <span>Explore Tattoos</span>
+              <svg class="w-4 h-4 ml-1 inline-block" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2.5">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </a>
+            <a href="#piercing-atelier" class="btn-secondary">
+              <span>Piercing Menu</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 2: TATTOO DISCIPLINES MATRIX (3-CARD SPEC MATRIX) ================= -->
+    <section id="tattoo-matrix" class="section-services-matrix" aria-labelledby="tattoo-matrix-heading">
+      <div class="container-custom">
+
+        <div class="text-center max-w-3xl mx-auto mb-10">
+          <span class="section-tagline">Tattoo Craft</span>
+          <h2 id="tattoo-matrix-heading" class="section-title text-3xl sm:text-4xl md:text-5xl font-black mt-2">
+            Custom Tattoo <span class="text-brand-red">Disciplines</span>
+          </h2>
+          <div class="section-divider"></div>
+          <p class="section-description">
+            Custom-drawn compositions fitted to anatomical movement with transparent studio pricing.
+          </p>
+        </div>
+
+        <!-- 3-Column Modern Discipline Cards (Minimal Text) -->
+        <div class="service-matrix-grid">
+
+          <!-- Card 1: Large Scale Masterpieces -->
+          <article class="service-card">
+            <div class="service-card-media">
+              <img src="assets/images/services/service-custom-large.jpg"
+                alt="Large Scale Full Sleeve and Backpiece Tattoo Artwork" loading="lazy">
+              <span class="service-card-badge">$200 - $250 / hr</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Large Scale Sleeves &amp; Backpieces</h3>
+              <p class="service-card-desc">
+                Multi-session anatomical compositions including full sleeves, backpieces, and Irezumi bodysuits.
+              </p>
+              <div class="service-card-specs">
+                <span class="service-spec-pill">Irezumi</span>
+                <span class="service-spec-pill">Realism</span>
+                <span class="service-spec-pill">Neo-Trad</span>
+              </div>
+              <div class="service-card-footer">
+                <span class="service-rate-label">Hourly Rate</span>
+                <a href="#consultation" class="service-action-link"
+                  aria-label="Book Consultation for Large Scale Tattoo">
+                  <span>Book Consultation</span>
+                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2: Fine Line & Micro Realism (Verified Peony Tattoo) -->
+          <article class="service-card">
+            <div class="service-card-media">
+              <img src="assets/images/services/service-fineline-botanical.jpg"
+                alt="Delicate Fine Line Botanical and Single Needle Peony Tattoo" loading="lazy">
+              <span class="service-card-badge">From $180 / pc</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Fine Line &amp; Micro Realism</h3>
+              <p class="service-card-desc">
+                0.15mm single needle precision for crisp botanical flora, typographic scripts, and miniature portraits.
+              </p>
+              <div class="service-card-specs">
+                <span class="service-spec-pill">Fine Line</span>
+                <span class="service-spec-pill">Botanical</span>
+                <span class="service-spec-pill">Micro-Art</span>
+              </div>
+              <div class="service-card-footer">
+                <span class="service-rate-label">Piece Pricing</span>
+                <a href="#consultation" class="service-action-link" aria-label="Book Consultation for Fine Line Tattoo">
+                  <span>Book Consultation</span>
+                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: Scar Camouflage & Cover-ups -->
+          <article class="service-card">
+            <div class="service-card-media">
+              <img src="assets/images/services/service-coverup-rework.jpg"
+                alt="Custom Tattoo Rework and Scar Camouflage" loading="lazy">
+              <span class="service-card-badge">Free Assessment</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Scar Camouflage &amp; Cover-ups</h3>
+              <p class="service-card-desc">
+                Optical pigment camouflage for surgical scars, burns, stretch marks, and vintage blast-over reworks.
+              </p>
+              <div class="service-card-specs">
+                <span class="service-spec-pill">Scar Camo</span>
+                <span class="service-spec-pill">Cover-Ups</span>
+                <span class="service-spec-pill">Blast-Over</span>
+              </div>
+              <div class="service-card-footer">
+                <span class="service-rate-label">Custom Scope</span>
+                <a href="#consultation" class="service-action-link" aria-label="Book Diagnostic for Scar Cover-up">
+                  <span>Book Consultation</span>
+                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= SECTION 3: CURATED PIERCING & JEWELRY ATELIER (UNIQUE SPLIT SUITE) ================= -->
+    <section id="piercing-atelier" class="section-services-piercing" aria-labelledby="piercing-atelier-heading">
+      <div class="container-custom">
+
+        <div class="text-center max-w-3xl mx-auto mb-10">
+          <span class="section-tagline">Body Architecture</span>
+          <h2 id="piercing-atelier-heading" class="section-title text-3xl sm:text-4xl md:text-5xl font-black mt-2">
+            Precision Piercing &amp; <span class="text-brand-red">Jewelry Suite</span>
+          </h2>
+          <div class="section-divider"></div>
+          <p class="section-description">
+            Strictly sterile single-use tri-beveled needles and pure implant-grade ASTM F-136 metallurgy.
+          </p>
+        </div>
+
+        <!-- Completely Distinct Split Suite Layout (Featured Showcase Left + 3-Row Tier Stack Right) -->
+        <div class="piercing-split-suite">
+
+          <!-- Left: Featured Curated Ear Stage -->
+          <div class="piercing-feature-stage group">
+            <img src="assets/images/services/piercing-ear-curation.jpg"
+              alt="Curated Ear Piercing with 14K Gold and Titanium Jewelry" class="piercing-feature-bg" loading="lazy">
+            <div class="piercing-feature-overlay"></div>
+
+            <div class="piercing-feature-badge">
+              <span class="w-2 h-2 rounded-full bg-brand-red inline-block"></span>
+              <span>Solid 14K Gold &amp; Titanium ASTM F-136</span>
+            </div>
+
+            <div class="piercing-feature-content">
+              <span class="text-xs uppercase font-extrabold tracking-wider text-brand-red">Curated Studio Suite</span>
+              <h3 class="piercing-feature-title">Anatomical Piercing Architecture</h3>
+              <p class="piercing-feature-desc">
+                Custom placement mapped exclusively to your cartilage topography with sterile asepsis protocols.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right: 3 Horizontal Service & Pricing Rows -->
+          <div class="piercing-tier-stack">
+
+            <!-- Tier Row 1: Constellation Ear Styling -->
+            <div class="piercing-tier-row">
+              <div class="piercing-tier-thumb">
+                <img src="assets/images/services/piercing-ear-curation.jpg" alt="Constellation Ear Styling"
+                  loading="lazy">
+              </div>
+              <div class="piercing-tier-info">
+                <h4 class="piercing-tier-title">Constellation Ear Styling</h4>
+                <p class="piercing-tier-note">Helix, conch, daith &amp; tragus mapped to cartilage topography.</p>
+              </div>
+              <div class="piercing-tier-action-group">
+                <span class="piercing-tier-price">$45 - $65</span>
+                <a href="#consultation" class="piercing-tier-btn" aria-label="Book Constellation Ear Styling">
+                  <span>Book</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Tier Row 2: Facial & Oral Precision -->
+            <div class="piercing-tier-row">
+              <div class="piercing-tier-thumb">
+                <img src="assets/images/services/piercing-facial-oral.jpg" alt="Precision Septum and Nostril Piercing"
+                  loading="lazy">
+              </div>
+              <div class="piercing-tier-info">
+                <h4 class="piercing-tier-title">Facial &amp; Oral Precision</h4>
+                <p class="piercing-tier-note">Sub-millimeter septum sweet-spot, nostril, and labret symmetry.</p>
+              </div>
+              <div class="piercing-tier-action-group">
+                <span class="piercing-tier-price">$50 - $70</span>
+                <a href="#consultation" class="piercing-tier-btn" aria-label="Book Facial Piercing">
+                  <span>Book</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Tier Row 3: Implant Metallurgy Atelier -->
+            <div class="piercing-tier-row">
+              <div class="piercing-tier-thumb">
+                <img src="assets/images/services/piercing-titanium-jewelry.jpg"
+                  alt="ASTM F-136 Titanium and Solid 14K Gold Jewelry" loading="lazy">
+              </div>
+              <div class="piercing-tier-info">
+                <h4 class="piercing-tier-title">Implant Metallurgy Atelier</h4>
+                <p class="piercing-tier-note">Threadless ASTM F-136 titanium and solid 14K/18K nickel-free gold.</p>
+              </div>
+              <div class="piercing-tier-action-group">
+                <span class="piercing-tier-price">$35 - $380 / pc</span>
+                <a href="#consultation" class="piercing-tier-btn" aria-label="Browse Jewelry Atelier">
+                  <span>Browse</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= SECTION 4: STERILIZATION & CERTIFICATION STANDARDS ================= -->
+    <section class="section-services-cert" aria-labelledby="cert-standards-heading">
+      <div class="container-custom">
+
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <span class="section-tagline">Clinical Rigor</span>
+          <h2 id="cert-standards-heading" class="section-title">Hospital-Grade Sterilization Protocols</h2>
+          <div class="section-divider"></div>
+          <p class="section-description">
+            Zero compromises. Every instrument, needle, and jewelry piece exceeds clinical hospital standards.
+          </p>
+        </div>
+
+        <div class="cert-split-grid">
+
+          <!-- Left: 4 Certification Details -->
+          <div class="space-y-4">
+
+            <div class="cert-item-card">
+              <div class="cert-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <div class="cert-item-info">
+                <h4>Class-B Fractional Vacuum Autoclave</h4>
+                <p>Triple pulsed vacuum sterilization at 134°C with third-party biological spore testing logged weekly.
+                </p>
+              </div>
+            </div>
+
+            <div class="cert-item-card">
+              <div class="cert-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 14 14"></polyline>
+                </svg>
+              </div>
+              <div class="cert-item-info">
+                <h4>100% Single-Use Disposables</h4>
+                <p>Every needle cartridge, ink cap, barrier film, and cord sleeve is opened freshly before your eyes and
+                  destroyed after.</p>
+              </div>
+            </div>
+
+            <div class="cert-item-card">
+              <div class="cert-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                  </polygon>
+                </svg>
+              </div>
+              <div class="cert-item-info">
+                <h4>ASTM F-136 Implant Grade Certification</h4>
+                <p>Bio-inert implant grade titanium and nickel-free gold designed to eliminate allergic contact
+                  dermatitis.</p>
+              </div>
+            </div>
+
+            <div class="cert-item-card">
+              <div class="cert-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+              </div>
+              <div class="cert-item-info">
+                <h4>Health Department Inspected &amp; Licensed</h4>
+                <p>Exceeds OSHA bloodborne pathogen compliance standards and annual state department certifications.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right: Laboratory & Clean Room Photo -->
+          <div class="cert-image-frame">
+            <img src="assets/images/services/services-clinical-autoclave.jpg"
+              alt="Clinical Clean Room and Autoclave Sterilization Suite" loading="lazy">
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= SECTION 5: MANDATORY CONSULTATION CTA (FINAL SECTION) ================= -->
+    <section id="consultation" class="section-services-cta" aria-labelledby="services-cta-heading">
+      <img src="assets/images/services/p37.jpg" alt="Studio Consultation Room and Sterile Setup"
+        class="services-cta-bg">
+      <div class="absolute inset-0 bg-black/75 pointer-events-none" aria-hidden="true"></div>
+
+      <div class="container-custom relative z-10 text-center">
+        <span
+          class="inline-block px-3 py-1 rounded-full border border-brand-red/50 bg-brand-red/20 text-brand-red text-xs font-bold uppercase tracking-widest mb-4">
+          Reserve Your Session
+        </span>
+        <h2 id="services-cta-heading"
+          class="text-3xl sm:text-4xl md:text-5xl font-black text-white uppercase tracking-tight mb-4">
+          Ready to Begin Your <span class="text-brand-red">Body Art?</span>
+        </h2>
+        <p class="text-base sm:text-lg text-slate-200 max-w-2xl mx-auto mb-8 leading-relaxed"
+          style="text-wrap: balance;">
+          Book an in-person consultation with our resident tattoo masters or certified piercing artists. Same-day
+          appointments available for select piercings.
+        </p>
+
+        <div class="cta-actions-group flex flex-wrap items-center justify-center gap-4 mb-8">
+          <a href="contact.html" class="btn-primary">
+            <span>Schedule Online Consultation</span>
+            <svg class="w-4 h-4 ml-1 inline-block" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.5">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </a>
+          <a href="tel:+18005558288" class="btn-secondary">
+            <svg class="w-4 h-4 mr-1 inline-block" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+              </path>
+            </svg>
+            <span>Call +1 (800) 555-8288</span>
+          </a>
+        </div>
+
+        <p class="text-xs text-slate-400">
+          Walk-ins welcome for titanium ear and facial piercings &bull; Consultations required for custom tattoo
+          projects
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= Scroll to Top Button ================= -->
+  <button type="button" class="scroll-top-btn" aria-label="Scroll back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+      stroke-linejoin="round" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- ================= FOOTER (Same Unified Container) ================= -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container-custom">
+      <div class="footer-top">
+
+        <!-- Brand Info -->
+        <div class="footer-brand-col">
+          <div class="footer-logo-row">
+            <img src="assets/images/logo/logo.png" alt="Tattoo &amp; Piercing Studio" class="footer-logo-img">
+            <div class="brand-text-group">
+              <span class="brand-title">Tattoo &amp; Piercing</span>
+              <span class="brand-subtitle">Studio</span>
+            </div>
+          </div>
+          <p class="footer-desc">
+            Master custom tattoo craftsmanship and surgical-grade sterile body piercing by resident master artists.
+            Where artistic skin illustration meets medical-grade precision.
+          </p>
+          <div class="footer-social-row">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn"
+              aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn"
+              aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn"
+              aria-label="TikTok">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+              </svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn"
+              aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.08C5.12 19.54 12 19.54 12 19.54s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.41z">
+                </path>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Navigation -->
+        <div>
+          <h3 class="footer-heading">Studio</h3>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home 1 (Master)</a></li>
+            <li><a href="home-2.html">Home 2 (Editorial)</a></li>
+            <li><a href="about.html">About Studio</a></li>
+            <li><a href="artists.html">Resident Artists</a></li>
+            <li><a href="services.html">Services &amp; Pricing</a></li>
+            <li><a href="aftercare.html">Aftercare Guide</a></li>
+          </ul>
+        </div>
+
+        <!-- Specialties -->
+        <div>
+          <h3 class="footer-heading">Styles</h3>
+          <ul class="footer-links-list">
+            <li><a href="artists.html">Black &amp; Grey Realism</a></li>
+            <li><a href="artists.html">Traditional Japanese</a></li>
+            <li><a href="artists.html">Neo-Traditional</a></li>
+            <li><a href="artists.html">Fine Line &amp; Micro</a></li>
+            <li><a href="services.html">Titanium Piercing</a></li>
+            <li><a href="services.html">Custom Redesign</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact & Hours -->
+        <div>
+          <h3 class="footer-heading">Visit Studio</h3>
+          <div class="footer-contact-item">
+            <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span>420 Ink &amp; Steel Boulevard, Art District, NY 10012</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+              </path>
+            </svg>
+            <span>+1 (800) 555-8288</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            <span>Mon - Sat: 11:00 AM - 9:00 PM<br>Sun: 12:00 PM - 7:00 PM</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Tattoo &amp; Piercing Studio. All Rights Reserved. Clean art, sterile environment.</p>
+        <div class="flex items-center gap-6">
+          <a href="aftercare.html" class="hover:text-brand-red transition-colors">Aftercare Instructions</a>
+          <a href="contact.html" class="hover:text-brand-red transition-colors">Consultations</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- External JavaScript (JS in js folder only) -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

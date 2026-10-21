@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Our Studio | Tattoo &amp; Piercing Studio</title>
+  <meta name="description"
+    content="Discover the legacy, craftsmanship, and clinical sterile standard behind Tattoo &amp; Piercing Studio. Master custom ink and precision body modification.">
+  <link rel="icon" type="image/png" href="assets/images/logo/favicon.png">
+
+  <!-- Tailwind CSS CDN for utility support -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['class', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              red: '#ff1e44',
+              hover: '#e11d48',
+              dark: '#000000'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- External Stylesheets (CSS in css folder only) -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+
+  <!-- ================= 1. Branded Page Loader ================= -->
+  <div id="page-loader" role="status" aria-label="Loading Tattoo &amp; Piercing Studio">
+    <div class="loader-emblem-wrap">
+      <div class="loader-ring"></div>
+      <img src="assets/images/logo/logo.png" alt="Tattoo &amp; Piercing Studio Emblem" class="loader-logo-img">
+    </div>
+    <div class="loader-text">Tattoo &amp; Piercing Studio</div>
+    <div class="loader-progress-bar">
+      <div class="loader-progress-indicator"></div>
+    </div>
+  </div>
+
+  <!-- ================= 2. Fixed Compact Header (Same Unified Container) ================= -->
+  <header class="site-header" role="banner">
+    <div class="container-custom header-inner">
+
+      <!-- Brand Logo + Identity -->
+      <a href="index.html" class="brand-identity" aria-label="Tattoo &amp; Piercing Studio Home">
+        <img src="assets/images/logo/logo.png" alt="Tattoo &amp; Piercing Studio Logo" class="brand-logo-img">
+        <div class="brand-text-group">
+          <span class="brand-title">Tattoo &amp; Piercing</span>
+          <span class="brand-subtitle">Studio</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation - Exactly 6 Primary Items -->
+      <nav class="desktop-nav" role="navigation" aria-label="Main Navigation">
+
+        <!-- 1. Home (Click-Only Dropdown) -->
+        <div class="dropdown-container desktop-dropdown">
+          <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false"
+            id="homeDropdownBtn">
+            <span>Home</span>
+            <svg class="dropdown-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="dropdown-menu" role="menu" aria-labelledby="homeDropdownBtn">
+            <a href="index.html" class="dropdown-item" role="menuitem">
+              <span>Home 1</span>
+              <span class="dropdown-badge">Master</span>
+            </a>
+            <a href="home-2.html" class="dropdown-item" role="menuitem">
+              <span>Home 2</span>
+              <span class="dropdown-badge">Editorial</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 2. About (Active) -->
+        <a href="about.html" class="nav-link active">About</a>
+
+        <!-- 3. Artists -->
+        <a href="artists.html" class="nav-link">Artists</a>
+
+        <!-- 4. Services -->
+        <a href="services.html" class="nav-link">Services</a>
+
+        <!-- 5. Aftercare Guide -->
+        <a href="aftercare.html" class="nav-link">Aftercare</a>
+
+        <!-- 6. Contact (Directly Visible) -->
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Action Controls: RTL/LTR, Dark Mode, CTA Button & Mobile Toggle -->
+      <div class="header-actions">
+
+        <!-- RTL / LTR Toggle -->
+        <button type="button" class="icon-control-btn rtl-toggle-btn" aria-label="Toggle text direction"
+          title="Switch RTL/LTR">
+          <span class="rtl-indicator-text text-xs font-bold tracking-wider">LTR</span>
+        </button>
+
+        <!-- Dark / Light Mode Toggle -->
+        <button type="button" class="icon-control-btn theme-toggle-btn" aria-label="Toggle dark/light mode"
+          title="Toggle Theme">
+          <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="theme-icon-moon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <!-- CTA Button -->
+        <a href="#consultation" class="btn-header-cta" aria-label="Book Consultation Session">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="w-3.5 h-3.5 flex-shrink-0">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          <span>Book Session</span>
+        </a>
+
+        <!-- Mobile Menu Trigger -->
+        <button type="button" class="mobile-menu-btn" aria-label="Open navigation menu" aria-expanded="false"
+          aria-controls="mobileDrawer">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ================= 3. Mobile Navigation Drawer ================= -->
+  <div class="mobile-drawer-overlay" aria-hidden="true"></div>
+  <aside id="mobileDrawer" class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <div class="mobile-drawer-brand">
+        <img src="assets/images/logo/logo.png" alt="Tattoo &amp; Piercing Studio Logo">
+        <div class="brand-text-group">
+          <span class="brand-title">Tattoo &amp; Piercing</span>
+          <span class="brand-subtitle">Studio</span>
+        </div>
+      </div>
+      <button type="button" class="mobile-drawer-close icon-control-btn" aria-label="Close menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+          stroke-linejoin="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <div class="mobile-drawer-body">
+      <ul class="mobile-nav-list">
+        <!-- Mobile Accordion for Home (CLICK ONLY) -->
+        <li class="mobile-accordion">
+          <button type="button" class="mobile-accordion-toggle" aria-expanded="false">
+            <span>Home</span>
+            <svg class="mobile-accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="mobile-accordion-content">
+            <a href="index.html" class="mobile-sub-link">Home 1 (Master)</a>
+            <a href="home-2.html" class="mobile-sub-link">Home 2 (Editorial)</a>
+          </div>
+        </li>
+
+        <li><a href="about.html" class="mobile-nav-link active">About</a></li>
+        <li><a href="artists.html" class="mobile-nav-link">Artists</a></li>
+        <li><a href="services.html" class="mobile-nav-link">Services</a></li>
+        <li><a href="aftercare.html" class="mobile-nav-link">Aftercare Guide</a></li>
+        <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+      </ul>
+
+      <div class="mobile-drawer-controls">
+        <div class="mobile-drawer-toggles">
+          <!-- Dark / Light Mode Toggle -->
+          <button type="button" class="mobile-control-tile theme-toggle-btn" aria-label="Toggle dark/light mode"
+            title="Toggle Theme">
+            <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg class="theme-icon-moon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+            <span>Theme</span>
+          </button>
+
+          <!-- RTL / LTR Toggle -->
+          <button type="button" class="mobile-control-tile rtl-toggle-btn" aria-label="Toggle text direction"
+            title="Switch RTL/LTR">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <polyline points="4 7 4 4 20 4 20 7"></polyline>
+              <line x1="9" y1="20" x2="15" y2="20"></line>
+              <line x1="12" y1="4" x2="12" y2="20"></line>
+            </svg>
+            <span class="rtl-indicator-text">LTR</span>
+          </button>
+        </div>
+
+        <a href="#consultation" class="btn-primary w-full justify-center">
+          <svg class="w-4 h-4 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          <span>Book Consultation</span>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       MAIN CONTENT: EXACTLY 5 MAIN CONTENT SECTIONS (ABOUT PAGE)
+       All enclosed within the unified .container-custom (1120px)
+       ========================================================================== -->
+  <main id="main-content">
+
+    <!-- ================= SECTION 1: ABOUT HERO (CENTERED WITH BACKGROUND IMAGE) ================= -->
+    <section class="hero-about" aria-label="About Studio Heritage">
+      <img src="assets/images/about/p24.jpg" alt="Atmospheric studio work" class="hero-about-bg">
+      <div class="hero-about-overlay"></div>
+
+      <div class="container-custom">
+        <div class="hero-about-content">
+          <div class="badge-tag mx-auto mb-4">
+            <svg class="w-3 h-3 text-brand-red" viewBox="0 0 24 24" fill="currentColor">
+              <circle cx="12" cy="12" r="6"></circle>
+            </svg>
+            <span>Studio Heritage &amp; Ethos</span>
+          </div>
+
+          <h1 class="hero-about-heading">
+            Precision As Principle. <br>
+            <span class="hero-text-accent">Ink As Testament.</span>
+          </h1>
+
+          <p class="hero-about-desc">
+            Founded in 2012 to dismantle generic tattoo parlor tropes, our atelier unites museum-grade illustrative
+            draftsmanship with clinical hospital biosecurity.
+          </p>
+
+          <div class="flex flex-wrap items-center justify-center gap-4">
+            <a href="#manifesto" class="btn-primary">
+              <span>Read Our Manifesto</span>
+            </a>
+            <a href="artists.html" class="btn-secondary">
+              <span>Meet The Residents</span>
+            </a>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 2: STUDIO MANIFESTO (ASYMMETRIC SPLIT) ================= -->
+    <section id="manifesto" class="section-manifesto" aria-label="Studio Manifesto">
+      <div class="container-custom">
+        <div class="manifesto-grid">
+
+          <!-- Philosophy Left -->
+          <div>
+            <span class="section-eyebrow">Atelier Philosophy</span>
+            <h2 class="manifesto-quote">
+              "Skin is not merely a surface. It is permanent human architecture."
+            </h2>
+            <p class="section-desc mb-6">
+              We reject assembly-line flash designs and mass-volume piercing guns. Every incision, stencil gradient, and
+              jewelry bevel is planned around human muscular anatomy and lifetime healing.
+            </p>
+
+            <div class="space-y-4">
+              <div class="flex items-start gap-3">
+                <span class="text-brand-red font-bold text-lg">&bull;</span>
+                <div>
+                  <h3 class="font-heading text-sm font-bold uppercase">100% Original Custom Works</h3>
+                  <p class="text-xs text-muted">Never duplicated or sold as repeated stock flash. Each concept belongs
+                    exclusively to the client.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="text-brand-red font-bold text-lg">&bull;</span>
+                <div>
+                  <h3 class="font-heading text-sm font-bold uppercase">Clinical Autoclave Sterility</h3>
+                  <p class="text-xs text-muted">Exceeding state health department standards with continuous biological
+                    spore testing and barrier isolation.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="text-brand-red font-bold text-lg">&bull;</span>
+                <div>
+                  <h3 class="font-heading text-sm font-bold uppercase">Lifetime Dermal Support</h3>
+                  <p class="text-xs text-muted">Complimentary post-session healing evaluations, touch-ups within 90
+                    days, and sterile jewelry downsizing.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image Frame Right -->
+          <div class="manifesto-img-frame">
+            <img src="assets/images/about/p25.jpg" alt="Master craft tattoo machine and sterile workstation setup">
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 3: FOUNDERS & DIRECTORS (2 EVEN CARDS) ================= -->
+    <section class="section-founders" aria-label="Studio Leadership and Founders">
+      <div class="container-custom">
+        <div class="text-center max-w-2xl mx-auto">
+          <span class="section-eyebrow">Studio Leadership</span>
+          <h2 class="section-title">The Master Directors</h2>
+          <p class="section-desc mx-auto mt-2">
+            Combining traditional Japanese apprenticeship discipline with modern medical body modification science.
+          </p>
+        </div>
+
+        <!-- Strictly Balanced 2-Column Grid with Even Heights -->
+        <div class="founders-grid">
+
+          <!-- Founder 1 -->
+          <article class="founder-card-even">
+            <div class="founder-img-wrap">
+              <img src="assets/images/about/p26.jpg" alt="Kuro Vance - Master Tattooist and Atelier Founder"
+                class="founder-img">
+            </div>
+            <div class="founder-body">
+              <div>
+                <h3 class="founder-name">Kuro Vance</h3>
+                <p class="founder-title">Founder &amp; Master Tattooist</p>
+                <p class="founder-bio">
+                  Apprenticed in Tokyo under third-generation Horishi masters before establishing the studio in 2012.
+                  Specializes in large-scale anatomical Irezumi and illustrative mythology.
+                </p>
+              </div>
+              <div class="founder-card-footer">
+                <span class="founder-meta">19 Years Tattoo Experience</span>
+                <a href="artists.html" class="founder-btn btn-secondary">View Works</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Founder 2 -->
+          <article class="founder-card-even">
+            <div class="founder-img-wrap">
+              <img src="assets/images/about/p27.jpg"
+                alt="Dr. Maya Sterling - Senior Body Piercer and Clinical Biosecurity Director" class="founder-img">
+            </div>
+            <div class="founder-body">
+              <div>
+                <h3 class="founder-name">Dr. Maya Sterling</h3>
+                <p class="founder-title">Clinical Director &amp; Master Piercer</p>
+                <p class="founder-bio">
+                  Registered surgical technician and Association of Professional Piercers member. Oversees all
+                  biological sterilization protocols and luxury solid-gold curation suites.
+                </p>
+              </div>
+              <div class="founder-card-footer">
+                <span class="founder-meta">14 Years Medical Piercing</span>
+                <a href="services.html" class="founder-btn btn-secondary">View Piercings</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 4: STUDIO BIOSECURITY & HYGIENE ================= -->
+    <section class="section-lab" aria-label="Studio Biosecurity and Cleanroom Hygiene">
+      <div class="container-custom">
+        <div class="lab-grid">
+
+          <!-- Cleanroom Workstation Image Frame Left -->
+          <div class="lab-img-frame">
+            <img src="assets/images/about/p28.jpg"
+              alt="Tattoo and piercing studio autoclave sterilization and biosecurity workstation" loading="lazy">
+          </div>
+
+          <!-- Studio Standards Right (Simple, Clean, Minimal Text) -->
+          <div>
+            <span class="section-eyebrow">Studio Biosecurity</span>
+            <h2 class="section-title text-3xl sm:text-4xl font-black mt-2">
+              Sterile Studio <span class="text-brand-red">Hygiene</span>
+            </h2>
+            <p class="section-desc mt-2 text-sm text-muted">
+              Clinical autoclave sterilization and 100% single-use biosecurity protocols for every session.
+            </p>
+
+            <div class="lab-standards-list">
+              <div class="lab-standard-item">
+                <div class="lab-standard-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                </div>
+                <h3 class="lab-standard-label">Class-B Autoclave</h3>
+                <p class="lab-standard-desc">Digital vacuum spore-tested weekly.</p>
+              </div>
+
+              <div class="lab-standard-item">
+                <div class="lab-standard-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                </div>
+                <h3 class="lab-standard-label">Single-Use Needles</h3>
+                <p class="lab-standard-desc">EO-gas sealed, unboxed live in front of you.</p>
+              </div>
+
+              <div class="lab-standard-item">
+                <div class="lab-standard-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                    </polygon>
+                  </svg>
+                </div>
+                <h3 class="lab-standard-label">ASTM F-136 Titanium</h3>
+                <p class="lab-standard-desc">Implant-grade, nickel-free body jewelry.</p>
+              </div>
+
+              <div class="lab-standard-item">
+                <div class="lab-standard-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                  </svg>
+                </div>
+                <h3 class="lab-standard-label">Pure Vegan Inks</h3>
+                <p class="lab-standard-desc">Heavy-metal free, gamma-ray sterilized.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 5: STUDIO CONSULTATION CTA (MANDATORY FINAL SECTION) ================= -->
+    <section id="consultation" class="section-about-cta" aria-label="Book Tattoo or Piercing Consultation">
+      <img src="assets/images/backgrounds/p29.jpg" alt="Dark studio atmosphere" class="about-cta-bg">
+      <div class="container-custom">
+        <div class="cta-inner-box">
+          <span class="section-eyebrow">Studio Consultations</span>
+          <h2 class="cta-title">Consult With Our Resident Masters</h2>
+          <p class="cta-desc">
+            Whether starting a multi-session backpiece or styling curated ear projects, our directors and residents are
+            available for confidential anatomical consultations.
+          </p>
+          <div class="cta-actions-group">
+            <a href="contact.html" class="btn-primary">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+              <span>Schedule Atelier Booking</span>
+            </a>
+            <a href="tel:+18005558288" class="btn-secondary">
+              <svg class="w-4 h-4 text-brand-red" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2.2">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
+              </svg>
+              <span>Call: +1 (800) 555-8288</span>
+            </a>
+          </div>
+          <p class="text-xs uppercase font-extrabold tracking-wider text-gray-300 mt-6">
+            Sterile Autoclave Environment &bull; Licensed Body Art Practitioners &bull; Walk-Ins Welcomed
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= 6. Scroll to Top Button ================= -->
+  <button type="button" class="scroll-top-btn" aria-label="Scroll back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+      stroke-linejoin="round" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- ================= 7. Shared Studio Footer ================= -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container-custom">
+      <div class="footer-top">
+
+        <!-- Brand Info -->
+        <div class="footer-brand-col">
+          <div class="footer-logo-row">
+            <img src="assets/images/logo/logo.png" alt="Tattoo &amp; Piercing Studio" class="footer-logo-img">
+            <div class="brand-text-group">
+              <span class="brand-title">Tattoo &amp; Piercing</span>
+              <span class="brand-subtitle">Studio</span>
+            </div>
+          </div>
+          <p class="footer-desc">
+            Master custom tattoo craftsmanship and surgical-grade sterile body piercing by resident master artists.
+            Where artistic skin illustration meets medical-grade precision.
+          </p>
+          <div class="footer-social-row">
+            <a href="#" class="footer-social-btn" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="#" class="footer-social-btn" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <a href="#" class="footer-social-btn" aria-label="Twitter">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path
+                  d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                </path>
+              </svg>
+            </a>
+            <a href="#" class="footer-social-btn" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.08C5.12 19.54 12 19.54 12 19.54s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.41z">
+                </path>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Navigation -->
+        <div>
+          <h3 class="footer-heading">Studio</h3>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home 1 (Master)</a></li>
+            <li><a href="home-2.html">Home 2 (Editorial)</a></li>
+            <li><a href="about.html">About Studio</a></li>
+            <li><a href="artists.html">Resident Artists</a></li>
+            <li><a href="services.html">Services &amp; Pricing</a></li>
+            <li><a href="aftercare.html">Aftercare Guide</a></li>
+          </ul>
+        </div>
+
+        <!-- Specialties -->
+        <div>
+          <h3 class="footer-heading">Styles</h3>
+          <ul class="footer-links-list">
+            <li><a href="artists.html">Black &amp; Grey Realism</a></li>
+            <li><a href="artists.html">Traditional Japanese</a></li>
+            <li><a href="artists.html">Neo-Traditional</a></li>
+            <li><a href="artists.html">Fine Line &amp; Micro</a></li>
+            <li><a href="services.html">Titanium Piercing</a></li>
+            <li><a href="services.html">Custom Redesign</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact & Hours -->
+        <div>
+          <h3 class="footer-heading">Visit Studio</h3>
+          <div class="footer-contact-item">
+            <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span>420 Ink &amp; Steel Boulevard, Art District, NY 10012</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+              </path>
+            </svg>
+            <span>+1 (800) 555-8288</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            <span>Mon - Sat: 11:00 AM - 9:00 PM<br>Sun: 12:00 PM - 7:00 PM</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Tattoo &amp; Piercing Studio. All Rights Reserved. Clean art, sterile environment.</p>
+        <div class="flex items-center gap-6">
+          <a href="aftercare.html" class="hover:text-brand-red transition-colors">Aftercare Instructions</a>
+          <a href="contact.html" class="hover:text-brand-red transition-colors">Consultations</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- External JavaScript (JS in js folder only) -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

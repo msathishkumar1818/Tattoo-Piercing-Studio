@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editorial Gallery | Tattoo &amp; Piercing Studio</title>
+  <meta name="description"
+    content="Tattoo &amp; Piercing Studio - Editorial showcase of bespoke large-scale tattoo illustration, anatomical body modifications, and fine jewelry curation.">
+  <link rel="icon" type="image/png" href="assets/images/logo/favicon.png">
+
+  <!-- Tailwind CSS CDN for utility support -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['class', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              red: '#ff1e44',
+              hover: '#e11d48',
+              dark: '#000000'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- External Stylesheets (CSS in css folder only) -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+
+  <!-- ================= 1. Branded Page Loader ================= -->
+  <div id="page-loader" role="status" aria-label="Loading Tattoo &amp; Piercing Studio">
+    <div class="loader-emblem-wrap">
+      <div class="loader-ring"></div>
+      <img src="assets/images/logo/logo.png" alt="Tattoo &amp; Piercing Studio Emblem" class="loader-logo-img">
+    </div>
+    <div class="loader-text">Tattoo &amp; Piercing Studio</div>
+    <div class="loader-progress-bar">
+      <div class="loader-progress-indicator"></div>
+    </div>
+  </div>
+
+  <!-- ================= 2. Fixed Compact Header (Same Unified Container) ================= -->
+  <header class="site-header" role="banner">
+    <div class="container-custom header-inner">
+
+      <!-- Brand Logo + Identity -->
+      <a href="index.html" class="brand-identity" aria-label="Tattoo &amp; Piercing Studio Home">
+        <img src="assets/images/logo/logo.png" alt="Tattoo &amp; Piercing Studio Logo" class="brand-logo-img">
+        <div class="brand-text-group">
+          <span class="brand-title">Tattoo &amp; Piercing</span>
+          <span class="brand-subtitle">Studio</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation - Exactly 6 Primary Items -->
+      <nav class="desktop-nav" role="navigation" aria-label="Main Navigation">
+
+        <!-- 1. Home (Click-Only Dropdown) -->
+        <div class="dropdown-container desktop-dropdown">
+          <button type="button" class="dropdown-trigger active" aria-haspopup="true" aria-expanded="false"
+            id="homeDropdownBtn">
+            <span>Home</span>
+            <svg class="dropdown-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="dropdown-menu" role="menu" aria-labelledby="homeDropdownBtn">
+            <a href="index.html" class="dropdown-item" role="menuitem">
+              <span>Home 1</span>
+              <span class="dropdown-badge">Master</span>
+            </a>
+            <a href="home-2.html" class="dropdown-item active" role="menuitem">
+              <span>Home 2</span>
+              <span class="dropdown-badge">Editorial</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 2. About -->
+        <a href="about.html" class="nav-link">About</a>
+
+        <!-- 3. Artists -->
+        <a href="artists.html" class="nav-link">Artists</a>
+
+        <!-- 4. Services -->
+        <a href="services.html" class="nav-link">Services</a>
+
+        <!-- 5. Aftercare Guide -->
+        <a href="aftercare.html" class="nav-link">Aftercare</a>
+
+        <!-- 6. Contact (Directly Visible) -->
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Action Controls: RTL/LTR, Dark Mode, CTA Button & Mobile Toggle -->
+      <div class="header-actions">
+
+        <!-- RTL / LTR Toggle -->
+        <button type="button" class="icon-control-btn rtl-toggle-btn" aria-label="Toggle text direction"
+          title="Switch RTL/LTR">
+          <span class="rtl-indicator-text text-xs font-bold tracking-wider">LTR</span>
+        </button>
+
+        <!-- Dark / Light Mode Toggle -->
+        <button type="button" class="icon-control-btn theme-toggle-btn" aria-label="Toggle dark/light mode"
+          title="Toggle Theme">
+          <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="theme-icon-moon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <!-- CTA Button -->
+        <a href="#consultation" class="btn-header-cta" aria-label="Book Consultation Session">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="w-3.5 h-3.5 flex-shrink-0">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          <span>Book Session</span>
+        </a>
+
+        <!-- Mobile Menu Trigger -->
+        <button type="button" class="mobile-menu-btn" aria-label="Open navigation menu" aria-expanded="false"
+          aria-controls="mobileDrawer">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ================= 3. Mobile Navigation Drawer ================= -->
+  <div class="mobile-drawer-overlay" aria-hidden="true"></div>
+  <aside id="mobileDrawer" class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <div class="mobile-drawer-brand">
+        <img src="assets/images/logo/logo.png" alt="Tattoo &amp; Piercing Studio Logo">
+        <div class="brand-text-group">
+          <span class="brand-title">Tattoo &amp; Piercing</span>
+          <span class="brand-subtitle">Studio</span>
+        </div>
+      </div>
+      <button type="button" class="mobile-drawer-close icon-control-btn" aria-label="Close menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+          stroke-linejoin="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <div class="mobile-drawer-body">
+      <ul class="mobile-nav-list">
+        <!-- Mobile Accordion for Home (CLICK ONLY) -->
+        <li class="mobile-accordion">
+          <button type="button" class="mobile-accordion-toggle" aria-expanded="false">
+            <span>Home</span>
+            <svg class="mobile-accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="mobile-accordion-content">
+            <a href="index.html" class="mobile-sub-link">Home 1 (Master)</a>
+            <a href="home-2.html" class="mobile-sub-link active">Home 2 (Editorial)</a>
+          </div>
+        </li>
+
+        <li><a href="about.html" class="mobile-nav-link">About</a></li>
+        <li><a href="artists.html" class="mobile-nav-link">Artists</a></li>
+        <li><a href="services.html" class="mobile-nav-link">Services</a></li>
+        <li><a href="aftercare.html" class="mobile-nav-link">Aftercare Guide</a></li>
+        <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+      </ul>
+
+      <div class="mobile-drawer-controls">
+        <div class="mobile-drawer-toggles">
+          <!-- Dark / Light Mode Toggle -->
+          <button type="button" class="mobile-control-tile theme-toggle-btn" aria-label="Toggle dark/light mode"
+            title="Toggle Theme">
+            <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg class="theme-icon-moon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+            <span>Theme</span>
+          </button>
+
+          <!-- RTL / LTR Toggle -->
+          <button type="button" class="mobile-control-tile rtl-toggle-btn" aria-label="Toggle text direction"
+            title="Switch RTL/LTR">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <polyline points="4 7 4 4 20 4 20 7"></polyline>
+              <line x1="9" y1="20" x2="15" y2="20"></line>
+              <line x1="12" y1="4" x2="12" y2="20"></line>
+            </svg>
+            <span class="rtl-indicator-text">LTR</span>
+          </button>
+        </div>
+
+        <a href="#consultation" class="btn-primary w-full justify-center">
+          <svg class="w-4 h-4 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          <span>Book Consultation</span>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       MAIN CONTENT: EXACTLY 6 MAIN CONTENT SECTIONS (HOME 2 - EDITORIAL)
+       All enclosed within the unified .container-custom
+       ========================================================================== -->
+  <main id="main-content">
+
+    <!-- ================= SECTION 1: HERO CENTRED OVERLAY (NEW COMPOSITION) ================= -->
+    <section class="hero-home2" aria-label="Editorial Studio Introduction">
+      <!-- Full-bleed Background Image with Dark Contrast Overlay -->
+      <img src="assets/images/hero/p14.jpg" alt="Master tattoo machine precision work" class="hero-home2-bg">
+      <div class="hero-home2-overlay"></div>
+
+      <div class="container-custom">
+        <div class="hero-home2-content">
+          <div class="badge-tag mx-auto mb-4">
+            <svg class="w-3 h-3 text-brand-red" viewBox="0 0 24 24" fill="currentColor">
+              <circle cx="12" cy="12" r="6"></circle>
+            </svg>
+            <span>Editorial Atelier Edition</span>
+          </div>
+
+          <h1 class="hero-home2-heading">
+            Where Flesh Becomes <br>
+            <span class="hero-text-accent">Living Architecture.</span>
+          </h1>
+
+          <p class="hero-home2-desc">
+            An uncompromising standard of single-session fine art tattooing, clinical titanium body piercing, and
+            anatomical aesthetic placement.
+          </p>
+
+          <div class="flex flex-wrap items-center justify-center gap-4">
+            <a href="#consultation" class="btn-primary">
+              <span>Initiate Consultation</span>
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="services.html" class="btn-secondary">
+              <span>Explore Disciplines</span>
+            </a>
+          </div>
+
+          <!-- Micro Stats Centered -->
+          <div
+            class="hero-home2-stats flex items-center justify-center gap-4 sm:gap-8 mt-12 pt-6 border-t border-white/10 max-w-lg mx-auto">
+            <div class="text-center">
+              <span class="block font-heading text-2xl font-black text-white">100%</span>
+              <span class="text-[0.7rem] uppercase tracking-wider text-gray-300 font-bold">Custom Drafts</span>
+            </div>
+            <div class="h-8 w-px bg-white/10"></div>
+            <div class="text-center">
+              <span class="block font-heading text-2xl font-black text-white">F-136</span>
+              <span class="text-[0.7rem] uppercase tracking-wider text-gray-300 font-bold">Medical Titanium</span>
+            </div>
+            <div class="h-8 w-px bg-white/10"></div>
+            <div class="text-center">
+              <span class="block font-heading text-2xl font-black text-white">Zero</span>
+              <span class="text-[0.7rem] uppercase tracking-wider text-gray-300 font-bold">Stock Flash</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 2: EXPANDING FILMSTRIP ATELIER (BESPOKE LAYOUT) ================= -->
+    <section class="section-home2-styles" aria-label="Style Disciplines">
+      <div class="container-custom">
+        <div class="text-center max-w-2xl mx-auto">
+          <span class="section-eyebrow">Aesthetic Specialties</span>
+          <h2 class="section-title">Signature Stylistic Movements</h2>
+          <p class="section-desc mx-auto mt-2">
+            Every tattoo style requires distinct needle groupings, ink chemistry, and anatomical movement
+            considerations.
+          </p>
+        </div>
+
+        <!-- High-Fashion Interactive Expanding Filmstrip Atelier -->
+        <div class="home2-filmstrip-wrapper" id="filmstripAtelier">
+
+          <!-- Panel 1: Dark Surrealism -->
+          <div class="filmstrip-panel active" data-panel="1" tabindex="0" role="region"
+            aria-label="Dark Surrealism Tattoo Specialty">
+            <img src="assets/images/sections/p15.jpg" alt="Dark Surrealism and Hyper Realism Tattoo Masterpiece"
+              class="filmstrip-bg" loading="lazy">
+            <div class="filmstrip-overlay"></div>
+
+            <div class="filmstrip-collapsed-label">
+              <span class="filmstrip-index">01</span>
+              <span class="filmstrip-vertical-title">Dark Surrealism</span>
+            </div>
+
+            <div class="filmstrip-expanded-content">
+              <div class="filmstrip-badge-row">
+                <span class="filmstrip-badge">Movement 01</span>
+                <span class="filmstrip-tech">Carbon Realism</span>
+              </div>
+              <h3 class="filmstrip-title">Dark Surrealism &amp; Chiaroscuro</h3>
+              <p class="filmstrip-desc">
+                Hyper-realistic portraiture merged with baroque shadow contrast, deep archival carbon pigments, and
+                micro-detailed anatomical shading.
+              </p>
+              <div class="filmstrip-meta-pills">
+                <span class="meta-pill">3-Round Liner</span>
+                <span class="meta-pill">15-Curved Mag</span>
+                <span class="meta-pill">Black &amp; Grey</span>
+              </div>
+              <a href="artists.html" class="filmstrip-cta-btn" aria-label="Explore Dark Surrealism Resident Masters">
+                <span>View Master Portfolios</span>
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Panel 2: Sacred Geometry -->
+          <div class="filmstrip-panel" data-panel="2" tabindex="0" role="region"
+            aria-label="Sacred Geometry Tattoo Specialty">
+            <img src="assets/images/sections/p16.jpg" alt="Sacred Geometry and Dotwork Mandala Tattoo Art"
+              class="filmstrip-bg" loading="lazy">
+            <div class="filmstrip-overlay"></div>
+
+            <div class="filmstrip-collapsed-label">
+              <span class="filmstrip-index">02</span>
+              <span class="filmstrip-vertical-title">Sacred Geometry</span>
+            </div>
+
+            <div class="filmstrip-expanded-content">
+              <div class="filmstrip-badge-row">
+                <span class="filmstrip-badge">Movement 02</span>
+                <span class="filmstrip-tech">Pointillist Dotwork</span>
+              </div>
+              <h3 class="filmstrip-title">Sacred Geometry &amp; Mandalas</h3>
+              <p class="filmstrip-desc">
+                Golden-ratio Fibonacci spirals, architectural symmetry, and pointillist dotwork mandalas mapped with
+                millimeter accuracy to muscle dynamics.
+              </p>
+              <div class="filmstrip-meta-pills">
+                <span class="meta-pill">Pointillism</span>
+                <span class="meta-pill">Fibonacci Ratio</span>
+                <span class="meta-pill">Symmetry Mapping</span>
+              </div>
+              <a href="artists.html" class="filmstrip-cta-btn" aria-label="Explore Sacred Geometry Resident Masters">
+                <span>View Master Portfolios</span>
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Panel 3: Micro Botanical -->
+          <div class="filmstrip-panel" data-panel="3" tabindex="0" role="region"
+            aria-label="Micro Botanical Tattoo Specialty">
+            <img src="assets/images/sections/p17.jpg" alt="Delicate Single Needle Micro Botanical Floral Tattoo"
+              class="filmstrip-bg" loading="lazy">
+            <div class="filmstrip-overlay"></div>
+
+            <div class="filmstrip-collapsed-label">
+              <span class="filmstrip-index">03</span>
+              <span class="filmstrip-vertical-title">Micro Botanical</span>
+            </div>
+
+            <div class="filmstrip-expanded-content">
+              <div class="filmstrip-badge-row">
+                <span class="filmstrip-badge">Movement 03</span>
+                <span class="filmstrip-tech">0.15mm Single Needle</span>
+              </div>
+              <h3 class="filmstrip-title">Single-Needle Micro Botanical</h3>
+              <p class="filmstrip-desc">
+                Whisper-thin floral stems, wild botanical herbs, and miniature typography rendered with extreme
+                single-needle surgical precision.
+              </p>
+              <div class="filmstrip-meta-pills">
+                <span class="meta-pill">0.15mm Single Needle</span>
+                <span class="meta-pill">Fine Line</span>
+                <span class="meta-pill">Delicate Flora</span>
+              </div>
+              <a href="artists.html" class="filmstrip-cta-btn" aria-label="Explore Botanical Resident Masters">
+                <span>View Master Portfolios</span>
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 3: STERILE ANATOMY JOURNEY (PROCESS TIMELINE) ================= -->
+    <section class="section-home2-flow" aria-label="Anatomical Consultation Process">
+      <div class="container-custom">
+        <div class="text-center max-w-2xl mx-auto">
+          <span class="section-eyebrow">Protocol &amp; Process</span>
+          <h2 class="section-title">The Three-Phase Atelier Standard</h2>
+          <p class="section-desc mx-auto mt-2">
+            From initial bone structure mapping to medical-grade healing, our procedural protocol guarantees safety and
+            permanence.
+          </p>
+        </div>
+
+        <div class="home2-flow-grid">
+
+          <div class="home2-flow-item">
+            <span class="home2-flow-number">01</span>
+            <h3 class="home2-flow-title">Anatomy and Placement</h3>
+            <p class="home2-flow-desc">
+              Your artist evaluates muscular movement, skin tone, and body angles to ensure the artwork breathes
+              naturally with your body.
+            </p>
+          </div>
+
+          <div class="home2-flow-item">
+            <span class="home2-flow-number">02</span>
+            <h3 class="home2-flow-title">Autoclave & Cleanroom </h3>
+            <p class="home2-flow-desc">
+              Individual surgical barrier barriers applied before unsealing sterile EO-gas-treated needle cartridges in
+              front of the client.
+            </p>
+          </div>
+
+          <div class="home2-flow-item">
+            <span class="home2-flow-number">03</span>
+            <h3 class="home2-flow-title">Dermal Care &amp; Healing</h3>
+            <p class="home2-flow-desc">
+              Application of breathable second-skin dermal bandages alongside comprehensive aftercare documentation and
+              follow-up checks.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 4: PIERCING & JEWELRY ATELIER (ASYMMETRIC BENTO) ================= -->
+    <section class="section-home2-atelier" aria-label="Fine Piercing and Jewelry">
+      <div class="container-custom">
+        <!-- Section Header -->
+        <div class="text-center max-w-2xl mx-auto mb-8">
+          <span class="section-eyebrow">Medical Precision</span>
+          <h2 class="section-title text-3xl sm:text-4xl md:text-5xl font-black mt-2">
+            Curated at <span class="text-brand-red">our atelier</span>
+          </h2>
+          <p class="section-desc mt-2 text-sm sm:text-base text-muted">
+            Strictly sterile freehand needles, ASTM F-136 titanium, and solid 14K/18K nickel-free gold adornment.
+          </p>
+        </div>
+
+        <!-- Bento Mosaic 5-Card Grid -->
+        <div class="home2-bento-mosaic">
+          <!-- Item 1 (Left Tall: spans 2 rows on desktop) -->
+          <div class="bento-card bento-card-tall group">
+            <img src="assets/images/sections/p18.jpg"
+              alt="Curated ear architecture with solid gold and titanium jewelry" class="bento-img">
+            <span class="bento-pill-tag">Custom Ear Architecture</span>
+          </div>
+
+          <!-- Item 2 (Center Top) -->
+          <div class="bento-card group">
+            <img src="assets/images/sections/p19.jpg" alt="Macro detail of 14K solid gold threaded end"
+              class="bento-img">
+            <span class="bento-pill-tag">Solid 14K &amp; 18K Gold</span>
+          </div>
+
+          <!-- Item 3 (Right Top) -->
+          <div class="bento-card group">
+            <img src="assets/images/services/p20.jpg" alt="Precision facial sweet-spot piercing" class="bento-img">
+            <span class="bento-pill-tag">Precision Sweet-Spot</span>
+          </div>
+
+          <!-- Item 4 (Center Bottom) -->
+          <div class="bento-card group">
+            <img src="assets/images/services/p21.jpg" alt="ASTM F-136 implant-grade titanium selection"
+              class="bento-img">
+            <span class="bento-pill-tag">ASTM F-136 Titanium</span>
+          </div>
+
+          <!-- Item 5 (Right Bottom) -->
+          <div class="bento-card group">
+            <img src="assets/images/services/services-clinical-autoclave.jpg"
+              alt="Hospital sterile autoclave sterilization suite" class="bento-img">
+            <span class="bento-pill-tag">Hospital Sterile Suite</span>
+          </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="flex flex-wrap items-center justify-center gap-4 mt-10">
+          <a href="services.html" class="btn-primary !py-2.5 !px-6 !text-xs">
+            <span>View Piercing Menu</span>
+          </a>
+          <a href="aftercare.html" class="btn-secondary !py-2.5 !px-6 !text-xs">
+            <span>Healing Protocol</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 5: STUDIO ARCHITECTURE & ENVIRONMENT ================= -->
+    <section class="section-home2-architecture" aria-label="Studio Architecture">
+      <div class="container-custom">
+        <div class="home2-arch-grid">
+
+          <!-- Editorial Story Left -->
+          <div>
+            <span class="section-eyebrow">Sanctuary of Craft</span>
+            <h2 class="section-title">Designed for Focus &amp; Comfort</h2>
+            <p class="section-desc mt-2">
+              Our studio architecture separates high-flow consultation zones from private, acoustically isolated tattoo
+              booths for sustained, tranquil multi-hour sessions.
+            </p>
+
+            <div class="grid grid-cols-2 gap-4 mt-6 pt-4 border-t border-[var(--border-subtle)]">
+              <div>
+                <span class="block font-heading text-xl font-bold text-brand-red">HEPA-Filter</span>
+                <span class="text-xs text-muted uppercase font-bold tracking-wider">Air Exchange</span>
+              </div>
+              <div>
+                <span class="block font-heading text-xl font-bold text-brand-red">Private Bays</span>
+                <span class="text-xs text-muted uppercase font-bold tracking-wider">Client Privacy</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Frame Right -->
+          <div class="home2-arch-frame">
+            <img src="assets/images/sections/p22.jpg" alt="Modern sterile tattoo station and private client booth"
+              class="w-full h-full object-cover">
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 6: HIGH-IMPACT CONSULTATION CTA ================= -->
+    <section id="consultation" class="section-home2-cta" aria-label="Consultation Booking">
+      <img src="assets/images/backgrounds/p23.jpg" alt="Dark studio atmosphere" class="home2-cta-bg">
+      <div class="container-custom">
+        <div class="cta-inner-box">
+          <span class="section-eyebrow">Begin Your Project</span>
+          <h2 class="cta-title">Reserve Your Studio Session</h2>
+          <p class="cta-desc">
+            Directly communicate your reference art, placement concepts, and timeframe. We pair each concept with the
+            resident best suited to execute it.
+          </p>
+          <div class="cta-actions-group">
+            <a href="contact.html" class="btn-primary">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+              <span>Atelier Booking</span>
+            </a>
+            <a href="tel:+18005558288" class="btn-secondary">
+              <svg class="w-4 h-4 text-brand-red" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2.2">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
+              </svg>
+              <span>Call: +1 (800) 555-8288</span>
+            </a>
+          </div>
+          <p class="text-xs uppercase font-extrabold tracking-wider text-gray-300 mt-6">
+            Sterile Autoclave Environment &bull; Licensed Body Art Practitioners &bull; Walk-Ins Welcomed
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= 7. Scroll to Top Button ================= -->
+  <button type="button" class="scroll-top-btn" aria-label="Scroll back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+      stroke-linejoin="round" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- ================= 8. Shared Studio Footer ================= -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container-custom">
+      <div class="footer-top">
+
+        <!-- Brand Info -->
+        <div class="footer-brand-col">
+          <div class="footer-logo-row">
+            <img src="assets/images/logo/logo.png" alt="Tattoo &amp; Piercing Studio" class="footer-logo-img">
+            <div class="brand-text-group">
+              <span class="brand-title">Tattoo &amp; Piercing</span>
+              <span class="brand-subtitle">Studio</span>
+            </div>
+          </div>
+          <p class="footer-desc">
+            Master custom tattoo craftsmanship and surgical-grade sterile body piercing by resident master artists.
+            Where artistic skin illustration meets medical-grade precision.
+          </p>
+          <div class="footer-social-row">
+            <a href="#" class="footer-social-btn" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="#" class="footer-social-btn" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <a href="#" class="footer-social-btn" aria-label="Twitter">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path
+                  d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                </path>
+              </svg>
+            </a>
+            <a href="#" class="footer-social-btn" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.08C5.12 19.54 12 19.54 12 19.54s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.41z">
+                </path>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Navigation -->
+        <div>
+          <h3 class="footer-heading">Studio</h3>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home 1 (Master)</a></li>
+            <li><a href="home-2.html">Home 2 (Editorial)</a></li>
+            <li><a href="about.html">About Studio</a></li>
+            <li><a href="artists.html">Resident Artists</a></li>
+            <li><a href="services.html">Services &amp; Pricing</a></li>
+            <li><a href="aftercare.html">Aftercare Guide</a></li>
+          </ul>
+        </div>
+
+        <!-- Specialties -->
+        <div>
+          <h3 class="footer-heading">Styles</h3>
+          <ul class="footer-links-list">
+            <li><a href="artists.html">Black &amp; Grey Realism</a></li>
+            <li><a href="artists.html">Traditional Japanese</a></li>
+            <li><a href="artists.html">Neo-Traditional</a></li>
+            <li><a href="artists.html">Fine Line &amp; Micro</a></li>
+            <li><a href="services.html">Titanium Piercing</a></li>
+            <li><a href="services.html">Custom Redesign</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact & Hours -->
+        <div>
+          <h3 class="footer-heading">Visit Studio</h3>
+          <div class="footer-contact-item">
+            <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span>420 Ink &amp; Steel Boulevard, Art District, NY 10012</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+              </path>
+            </svg>
+            <span>+1 (800) 555-8288</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            <span>Mon - Sat: 11:00 AM - 9:00 PM<br>Sun: 12:00 PM - 7:00 PM</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Tattoo &amp; Piercing Studio. All Rights Reserved. Clean art, sterile environment.</p>
+        <div class="flex items-center gap-6">
+          <a href="aftercare.html" class="hover:text-brand-red transition-colors">Aftercare Instructions</a>
+          <a href="contact.html" class="hover:text-brand-red transition-colors">Consultations</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- External JavaScript (JS in js folder only) -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
